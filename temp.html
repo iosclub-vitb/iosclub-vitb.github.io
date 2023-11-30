@@ -1,0 +1,362 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en" class="a0">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="Official Website of the iOS Club - VIT Bhopal. Explore upcoming, on-going and past events, participate and learn">
+	<title>
+		iOS Club | VIT Bhopal </title>
+	<link rel="shortcut icon" href="images/logo/icon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="css/glightbox.min.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/apexcharts.css" />
+	<link rel="stylesheet" href="css/tailwind.css" />
+
+	<script defer src="alpine.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		// ===== wow js
+		new WOW().init();
+	</script>
+</head>
+
+<body x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+	@scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="a1 dark:a2">
+	<header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " :class="scrolledFromTop ? 'a1 dark:a3 a4 dark:a4 a5 a6 ' : ' a7 dark:a7' " class="a8 a9 aa ab ac ad">
+		<div class="ae">
+			<div class="af ag aa ac ah">
+				<div class="ai aj ak">
+					<a href="#home" :class="scrolledFromTop && '!al lg:!am' " class="an ab a2h lg:aW">
+						<img src="./images/logo/clublogoblack.png" alt="logo" class="ab dark:ao" />
+						<img src="./images/logo/clublogo.png" alt="logo" class="ao ab dark:an" />
+					</a>
+				</div>
+				<div class="aa ab ac ap ak">
+					<div>
+						<button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' "
+							id="navbarToggler" class="aq ar as/2 an at/2 au av aw[6px] ax focus:ay lg:ao">
+							<span :class="navbarOpen && 'az aA[7px]' "
+								class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+							<span :class="navbarOpen && 'aE' " class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+							<span :class="navbarOpen && 'aA[-8px] aF[135deg]' "
+								class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+						</button>
+						<nav :class="!navbarOpen && 'ao' " id="navbarCollapse"
+							class="aq ar aG ab aH[250px] au a1 al aI aJ dark:a2 lg:aK lg:an lg:ab lg:aj lg:a7 lg:aL lg:aM dark:lg:a7">
+							<ul class="aN lg:aa">
+								<li class="aQ dark:aS">
+									<a href="#home"
+										class="scroll-menu aa am aO aP aR hover:aR dark:aT dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+										Home
+									</a>
+								</li>
+								<li>
+									<a href="#features"
+										class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+										Features
+									</a>
+								</li>
+								<li>
+									<a href="#roadmap"
+										class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+										Roadmap
+									</a>
+								</li>
+								<li>
+									<a href="#team"
+										class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+										Our Team
+									</a>
+								</li>
+								<!--
+									<li class="aZ submenu-item af">
+										<a
+											href="javascript:void(0)"
+											@click="dropdownOpen = !dropdownOpen"
+											class="af aa am aO aP aQ after:aq after:a_ after:as/2 after:a10[-2px] after:a11 after:a12 after:a13[-50%] after:az after:a14 after:a15 after:a16 group-hover:aR dark:aS dark:group-hover:aT lg:aU lg:aV lg:aW lg:a17 lg:a18 lg:after:a19 xl:aX 2xl:aY"
+										>
+											Pages
+										</a>
+										<div
+											:class="dropdownOpen ? 'an' : 'ao lg:an ' "
+											class="submenu af aG a1a au a1 a1b[top] a1c group-hover:a1d dark:a2 lg:a1e lg:aq lg:aA[115%] lg:aD[250px] lg:a1f lg:aE lg:a1g lg:group-hover:a1h lg:group-hover:aG"
+										>
+											<a
+												href="blog-grid.html"
+												class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak"
+											>
+												Blog Grid Page
+											</a>
+											<a
+												href="blog-details.html"
+												class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak"
+											>
+												Blog Details Page
+											</a>
+											<a
+												href="token-sale.html"
+												class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak"
+											>
+												Token Sale Page
+											</a>
+											<a
+												href="support.html"
+												class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak"
+											>
+												Support Page
+											</a>
+											<a
+												href="signin.html"
+												class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak"
+											>
+												Signin Page
+											</a>
+											<a
+												href="signup.html"
+												class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak"
+											>
+												Signup Page
+											</a>
+										</div>-->
+
+								<li>
+									<a href="#contact"
+										class="scroll-menu aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+										Support
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="aa ap a1l lg:a1m xl:a1n 2xl:a1o">
+						<div class="a1p">
+							<label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
+								<input type="checkbox" name="darkToggler" id="darkToggler" class="a1x"
+									aria-label="darkToggler" />
+								<span class="aa a1y a1z ac a1t a1u a1A aT dark:a7 dark:aS">
+									<svg width="16" height="16" viewBox="0 0 16 16" class="a1B">
+										<path
+											d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
+									</svg>
+								</span>
+								<span class="aa a1y a1z ac a1t a1u a7 aQ dark:a1A dark:aT">
+									<svg width="13" height="15" viewBox="0 0 13 15" class="a1B">
+										<path
+											d="M10.6111 12.855C11.591 12.1394 12.3151 11.1979 12.7723 10.1623C10.4824 10.4065 8.1342 9.46314 6.67948 7.47109C5.22476 5.47905 5.04093 2.95516 5.97054 0.848179C4.84491 0.968503 3.72768 1.37162 2.74781 2.08719C-0.224105 4.25747 -0.874706 8.43084 1.29558 11.4028C3.46586 14.3747 7.63923 15.0253 10.6111 12.855Z" />
+									</svg>
+								</span>
+							</label>
+						</div>
+						<!--
+							<div class="ao sm:aa">
+								<a
+									href="signin.html"
+									class="aa ac a1t a1u a1C a1D aw[9px] a1E a1F aP aQ a1G hover:a1H hover:a1A hover:aT dark:a1I dark:aT dark:hover:a1 dark:hover:aR lg:px-4 xl:px-8"
+								>
+									Sign In
+								</a>
+							</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+
+
+    <div class="ab ak sm:a1M/2 lg:a1M/4">
+        <div class="aZ wow fadeInUp a1W au a4c a21 a1v a1f a2G a1G hover:a1H dark:a3" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">
+            <div class="a2a a2c a1i">
+                <img src="TEAM_MEMBER_PHOTO" alt="team" class="a4d ab">
+            </div>
+            <div>
+                <h3 class="a2s aO aP a1k dark:aT"> MEMBER NAME </h3>
+                <p class="a2d a1j a1R aQ dark:aS"> MEMBER POST</p>
+                <div class="a1N aa ac a1t a4e">
+                    <a href="LINKEDIN_PROFILE_URL" class="a2Q[#B6BFC9] hover:aR dark:aT dark:hover:aR" target="_blank" name="social-link" aria-label="social-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" class="a1B">
+                            <path d="M15.8333 2.5C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H15.8333ZM15.4167 15.4167V11C15.4167 10.2795 15.1304 9.5885 14.621 9.07903C14.1115 8.56955 13.4205 8.28333 12.7 8.28333C11.9917 8.28333 11.1667 8.71667 10.7667 9.36667V8.44167H8.44167V15.4167H10.7667V11.3083C10.7667 10.6667 11.2833 10.1417 11.925 10.1417C12.2344 10.1417 12.5312 10.2646 12.75 10.4834C12.9688 10.7022 13.0917 10.9989 13.0917 11.3083V15.4167H15.4167ZM5.73333 7.13333C6.10464 7.13333 6.46073 6.98583 6.72328 6.72328C6.98583 6.46073 7.13333 6.10464 7.13333 5.73333C7.13333 4.95833 6.50833 4.325 5.73333 4.325C5.35982 4.325 5.0016 4.47338 4.73749 4.73749C4.47338 5.0016 4.325 5.35982 4.325 5.73333C4.325 6.50833 4.95833 7.13333 5.73333 7.13333ZM6.89167 15.4167V8.44167H4.58333V15.4167H6.89167Z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+    
+	<footer class="af a2E a1J[120px]" id="footer">
+
+		<div class="ae">
+			<div class="ag aa a1L">
+				<div class="ab ak md:a1M/2 lg:a1U/12 xl:a1U/12">
+					<div class="wow fadeInUp a2_ aH[330px] xl:a30" data-wow-delay="0s">
+						<a href="#home" class="a2a a2i">
+							<img src="images/logo/clublogo.png" alt="logo" class="ao dark:an" />
+							<img src="images/logo/clublogoblack.png" alt="logo" class="dark:ao" />
+						</a>
+						<p class="a1W a1F a1R aQ dark:aS">
+							Come, Build an iOS Ecosystem With Us
+						</p>
+						<div class="aa ac a31">
+							<a href="https://www.instagram.com/iosclub_vitb/"
+								class="aa a32 a33 ac a1t a1u a1v aQ hover:a1A hover:aT dark:a3 dark:aT dark:hover:a1A"
+								name="social-link" aria-label="social-link" target="__blank">
+								<svg class="a1B" width="18" height="18" viewBox="0 0 30 30">
+									<path
+										d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z">
+									</path>
+								</svg>
+
+								<a href="https://chat.whatsapp.com/FXI1WeGjcI99n1Fk3p70Uo"
+									class="aa a32 a33 ac a1t a1u a1v aQ hover:a1A hover:aT dark:a3 dark:aT dark:hover:a1A"
+									name="social-link" aria-label="social-link" target="__blank">
+									<svg class="a1B" width="18" height="18" viewBox="0 0 30 30">
+										<path
+											d="M 15 3 C 8.373 3 3 8.373 3 15 C 3 17.251208 3.6323415 19.350068 4.7109375 21.150391 L 3.1074219 27 L 9.0820312 25.431641 C 10.829354 26.425062 12.84649 27 15 27 C 21.627 27 27 21.627 27 15 C 27 8.373 21.627 3 15 3 z M 10.892578 9.4023438 C 11.087578 9.4023438 11.287937 9.4011562 11.460938 9.4101562 C 11.674938 9.4151563 11.907859 9.4308281 12.130859 9.9238281 C 12.395859 10.509828 12.972875 11.979906 13.046875 12.128906 C 13.120875 12.277906 13.173313 12.453437 13.070312 12.648438 C 12.972312 12.848437 12.921344 12.969484 12.777344 13.146484 C 12.628344 13.318484 12.465078 13.532109 12.330078 13.662109 C 12.181078 13.811109 12.027219 13.974484 12.199219 14.271484 C 12.371219 14.568484 12.968563 15.542125 13.851562 16.328125 C 14.986562 17.342125 15.944188 17.653734 16.242188 17.802734 C 16.540187 17.951734 16.712766 17.928516 16.884766 17.728516 C 17.061766 17.533516 17.628125 16.864406 17.828125 16.566406 C 18.023125 16.268406 18.222188 16.319969 18.492188 16.417969 C 18.766188 16.515969 20.227391 17.235766 20.525391 17.384766 C 20.823391 17.533766 21.01875 17.607516 21.09375 17.728516 C 21.17075 17.853516 21.170828 18.448578 20.923828 19.142578 C 20.676828 19.835578 19.463922 20.505734 18.919922 20.552734 C 18.370922 20.603734 17.858562 20.7995 15.351562 19.8125 C 12.327563 18.6215 10.420484 15.524219 10.271484 15.324219 C 10.122484 15.129219 9.0605469 13.713906 9.0605469 12.253906 C 9.0605469 10.788906 9.8286563 10.071437 10.097656 9.7734375 C 10.371656 9.4754375 10.692578 9.4023438 10.892578 9.4023438 z">
+										</path>
+									</svg>
+								</a>
+
+								<a href="https://www.linkedin.com/company/ios-club-vit-bhopal"
+									class="aa a32 a33 ac a1t a1u a1v aQ hover:a1A hover:aT dark:a3 dark:aT dark:hover:a1A"
+									name="social-link" aria-label="social-link" target="__blank">
+									<svg width="16" height="16" viewBox="0 0 16 16" class="a1B">
+										<path
+											d="M13.8333 0.5C14.2754 0.5 14.6993 0.675595 15.0118 0.988155C15.3244 1.30072 15.5 1.72464 15.5 2.16667V13.8333C15.5 14.2754 15.3244 14.6993 15.0118 15.0118C14.6993 15.3244 14.2754 15.5 13.8333 15.5H2.16667C1.72464 15.5 1.30072 15.3244 0.988155 15.0118C0.675595 14.6993 0.5 14.2754 0.5 13.8333V2.16667C0.5 1.72464 0.675595 1.30072 0.988155 0.988155C1.30072 0.675595 1.72464 0.5 2.16667 0.5H13.8333ZM13.4167 13.4167V9C13.4167 8.27949 13.1304 7.5885 12.621 7.07903C12.1115 6.56955 11.4205 6.28333 10.7 6.28333C9.99167 6.28333 9.16667 6.71667 8.76667 7.36667V6.44167H6.44167V13.4167H8.76667V9.30833C8.76667 8.66667 9.28333 8.14167 9.925 8.14167C10.2344 8.14167 10.5312 8.26458 10.75 8.48338C10.9688 8.70217 11.0917 8.99891 11.0917 9.30833V13.4167H13.4167ZM3.73333 5.13333C4.10464 5.13333 4.46073 4.98583 4.72328 4.72328C4.98583 4.46073 5.13333 4.10464 5.13333 3.73333C5.13333 2.95833 4.50833 2.325 3.73333 2.325C3.35982 2.325 3.0016 2.47338 2.73749 2.73749C2.47338 3.0016 2.325 3.35982 2.325 3.73333C2.325 4.50833 2.95833 5.13333 3.73333 5.13333ZM4.89167 13.4167V6.44167H2.58333V13.4167H4.89167Z" />
+									</svg>
+								</a>
+								<a href="https://www.youtube.com/channel/UCqUYjA1pjpdrDFJDzTb45PA"
+									class="aa a32 a33 ac a1t a1u a1v aQ hover:a1A hover:aT dark:a3 dark:aT dark:hover:a1A"
+									name="social-link" aria-label="social-link" target="__blank">
+									<svg width="18" height="12" viewBox="0 0 18 12" class="a1B">
+										<path
+											d="M7.33366 8.49984L11.6587 5.99984L7.33366 3.49984V8.49984ZM16.967 1.97484C17.0753 2.3665 17.1503 2.8915 17.2003 3.55817C17.2587 4.22484 17.2837 4.79984 17.2837 5.29984L17.3337 5.99984C17.3337 7.82484 17.2003 9.1665 16.967 10.0248C16.7587 10.7748 16.2753 11.2582 15.5253 11.4665C15.1337 11.5748 14.417 11.6498 13.317 11.6998C12.2337 11.7582 11.242 11.7832 10.3253 11.7832L9.00033 11.8332C5.50866 11.8332 3.33366 11.6998 2.47533 11.4665C1.72533 11.2582 1.24199 10.7748 1.03366 10.0248C0.925326 9.63317 0.850326 9.10817 0.800326 8.44151C0.741992 7.77484 0.716992 7.19984 0.716992 6.69984L0.666992 5.99984C0.666992 4.17484 0.800326 2.83317 1.03366 1.97484C1.24199 1.22484 1.72533 0.741504 2.47533 0.533171C2.86699 0.424837 3.58366 0.349837 4.68366 0.299837C5.76699 0.241504 6.75866 0.216504 7.67533 0.216504L9.00033 0.166504C12.492 0.166504 14.667 0.299837 15.5253 0.533171C16.2753 0.741504 16.7587 1.22484 16.967 1.97484Z" />
+									</svg>
+								</a>
+						</div>
+					</div>
+				</div>
+				<div class="ab ak sm:a1M/2 md:a1M/2 lg:a1U/12 xl:a12/12">
+					<div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
+						<h2 class="a2K a2B a1P a1k dark:aT">Quick Links</h2>
+						<div class="a34">
+							<a href="#home" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+								Home
+							</a>
+							<a href="#roadmap" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+								Roadmap</a>
+						</div>
+					</div>
+				</div>
+				<!--
+				<div class="ab ak sm:a1M/2 md:a1M/2 lg:a1U/12 xl:a12/12">
+					<div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
+						<h2 class="a2K a2B a1P a1k dark:aT">Supports</h2>
+						<div class="a34">
+							<a href="#contact" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+								Contact
+							</a>
+							<a href="#footer" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+								Connect
+							</a>
+							<a href="javascript:void(0)" class="an a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+								Terms & Conditions
+							</a>
+
+						</div>
+					</div>
+				</div>
+			-->
+				<div class="ab ak md:a1M/2 lg:a1M/2 xl:a1U/12">
+					<div class="wow fadeInUp a2_ xl:a30" data-wow-delay="0s">
+						<h2 class="a2K a2B a1P a1k dark:aT">News & Posts</h2>
+						<div class="a34">
+							<div class="aa">
+								<div class="a20 aC[75px] ab aH[75px] a1X">
+									<img src="images/logo/gameflixlogo.webp" alt="post" class="a2w ab a1X a2x a2y" />
+								</div>
+								<div>
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSc0GXzQNSImCr3wB7kzbht0o_r3iRTDzA7_DfcoO_nC_gmkRQ/viewform"
+										target="_blank" class="a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+										GameFlix Seats Filling Faster Than Any Other Event. Reserve Yours Now
+									</a>
+									<p class="aa ac" style="padding-top: 3px;">
+										<span class="a35 aQ dark:aS">
+											<svg width="14" height="16" viewBox="0 0 14 16" class="a1B">
+												<path
+													d="M3.25 8H4.75V9.5H3.25V8ZM13.75 3.5V14C13.75 14.3978 13.592 14.7794 13.3107 15.0607C13.0294 15.342 12.6478 15.5 12.25 15.5H1.75C0.9175 15.5 0.25 14.825 0.25 14V3.5C0.25 3.10218 0.408035 2.72064 0.68934 2.43934C0.970644 2.15804 1.35218 2 1.75 2H2.5V0.5H4V2H10V0.5H11.5V2H12.25C12.6478 2 13.0294 2.15804 13.3107 2.43934C13.592 2.72064 13.75 3.10218 13.75 3.5ZM1.75 5H12.25V3.5H1.75V5ZM12.25 14V6.5H1.75V14H12.25ZM9.25 9.5V8H10.75V9.5H9.25ZM6.25 9.5V8H7.75V9.5H6.25ZM3.25 11H4.75V12.5H3.25V11ZM9.25 12.5V11H10.75V12.5H9.25ZM6.25 12.5V11H7.75V12.5H6.25Z" />
+											</svg>
+										</span>
+										<span class="a1j a1R aQ dark:aS"> Jan 29, 2023 </span>
+									</p>
+								</div>
+							</div>
+							<div class="aa">
+								<div class="a20 aC[75px] ab aH[75px] a1X">
+									<img src="images/logo/sampurnalogo.webp" alt="post" class="a2w ab a1X a2x a2y" />
+								</div>
+								<div>
+									<a class="a1F a1R aQ hover:aR dark:aS dark:hover:aR">
+										Sampurna to KickStart on 30<sup>th</sup> Jan, Are You Ready ?
+									</a>
+									<p class="aa ac" style="padding-top: 3px;">
+										<span class="a35 aQ dark:aS">
+											<svg width="14" height="16" viewBox="0 0 14 16" class="a1B">
+												<path
+													d="M3.25 8H4.75V9.5H3.25V8ZM13.75 3.5V14C13.75 14.3978 13.592 14.7794 13.3107 15.0607C13.0294 15.342 12.6478 15.5 12.25 15.5H1.75C0.9175 15.5 0.25 14.825 0.25 14V3.5C0.25 3.10218 0.408035 2.72064 0.68934 2.43934C0.970644 2.15804 1.35218 2 1.75 2H2.5V0.5H4V2H10V0.5H11.5V2H12.25C12.6478 2 13.0294 2.15804 13.3107 2.43934C13.592 2.72064 13.75 3.10218 13.75 3.5ZM1.75 5H12.25V3.5H1.75V5ZM12.25 14V6.5H1.75V14H12.25ZM9.25 9.5V8H10.75V9.5H9.25ZM6.25 9.5V8H7.75V9.5H6.25ZM3.25 11H4.75V12.5H3.25V11ZM9.25 12.5V11H10.75V12.5H9.25ZM6.25 12.5V11H7.75V12.5H6.25Z" />
+											</svg>
+										</span>
+										<span class="a1j a1R aQ dark:aS"> Jan 21, 2023 </span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wow fadeInUp a36 a2l[#F3F4F4] a37 a2G dark:a2l[#2D2C4A]" data-wow-delay="0s">
+				<p class="a1F a1R a4u aQ dark:aS">
+					© iOS Club | VIT Bhopal | 2023
+				</p>
+			</div>
+		</div>
+		<div class="aq a8 a1a a2Z">
+			<img src="images/shapes/footer-shape-2.svg" alt="shape" />
+		</div>
+		<div class="aq a2J a19 a2Z">
+			<img src="images/shapes/footer-shape-1.svg" alt="shape" />
+		</div>
+	</footer>
+
+	<a x-show="scrolledFromTop" href="#home" name="scrollToTop" aria-label="scrollToTop"
+		class="hover:a38 back-to-top ad a39 a3a a3b a2I[999] aa a32 a33 ac a1t au a1A aT a3c a3d">
+		<span class="a10[6px] a3e a3f az a36 a3g a1I"></span>
+	</a>
+	<script src="js/apexcharts.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

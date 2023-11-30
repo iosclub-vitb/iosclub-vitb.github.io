@@ -1,0 +1,86 @@
+@charset "UTF-8";
+.row {
+  display: flex;
+}
+.row .col {
+  flex: 1;
+}
+.row .col:last-child {
+  margin-left: 1em;
+}
+
+.inputradio {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  justify-items: center;
+  width: 70%;
+  background-color: rgb(19 27 95);
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background:rgb(19 27 95);
+  font-weight: bold;
+  cursor: pointer;
+transition-duration: 250ms;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #3e7dff;;
+}
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: white;
+  background: #131b41;
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #3e7dff;
+}
+
+input:checked + .tab-label {
+  background: #1e2763;
+  ;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}/*# sourceMappingURL=style.css.map */
+
+
+body {
+  background: #222;
+}
