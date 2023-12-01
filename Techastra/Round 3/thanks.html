@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voing</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header
+      x-data="
+	{
+	  navbarOpen: false,
+	  dropdownOpen: false
+	}
+  "
+    >
+      <div class="w-[100%]">
+        <img src="./images/logo/clublogo.png" alt="logo" class="logo" />
+      </div>
+    </header>
+    <section>
+      <section
+        style="
+          display: flex;
+          height: 80vh;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div style="display: grid; place-items: center">
+          <span id="team-name"> Thank you for voting </span>
+
+          <button id="s-btn">View Leaderboard</button>
+        </div>
+      </section>
+      <div class="background-image-svg">
+        <img src="images/shapes/hero-shape-1.svg" alt="" class="sec-bg-img1" />
+        <img src="images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+      </div>
+    </section>
+    <script>
+      let button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        window.location.replace("http://www.w3schools.com");
+      });
+    </script>
+  </body>
+</html>

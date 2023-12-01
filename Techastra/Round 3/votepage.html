@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting</title>
+    
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " >
+		
+		<div class="w-[100%] ">
+			<img src="./images/logo/clublogo.png" alt="logo" class="logo" width="120px" style="margin: 2.5% 5%;">
+		</div>
+	</header>
+<script src="./vote.js"></script>
+    <section>
+		<section id="home">
+			<div class="form-div">
+				<p>VOTE FOR YOUR FAVOURITE TEAM</p>
+				<form action="submitVote()" class="form-section space-y-8  " >
+					<!-- <label for="vote" class="text-lg text-white font-bold ">VOTE FOR YOUR FAVOURITE TEAM</label>  -->
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-A" value="TEAM_A">
+					<label for="team-A">TEAM A</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-B" value="TEAM_B">
+					<label for="team-B">TEAM B</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-C" value="TEAM_C">
+					<label for="team-C">TEAM C</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-D" value="TEAM_D">
+					<label for="team-D">TEAM D</label> <br>
+
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-A" value="TEAM_A">
+					<label for="team-A">TEAM A</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-B" value="TEAM_B">
+					<label for="team-B">TEAM B</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-C" value="TEAM_C">
+					<label for="team-C">TEAM C</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-D" value="TEAM_D">
+					<label for="team-D">TEAM D</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-A" value="TEAM_A">
+					<label for="team-A">TEAM A</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-B" value="TEAM_B">
+					<label for="team-B">TEAM B</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-C" value="TEAM_C">
+					<label for="team-C">TEAM C</label> <br>
+					<input onclick='unlockButton()' type="radio" name="votedTeam" id="team-D" value="TEAM_D">
+					<label for="team-D">TEAM D</label> <br>
+
+
+
+				</form>
+				<br>
+				<div style="text-align: center;">
+					<button onclick="submitVote()" disabled class="submit-btn" id="submitButton">SUBMIT</button>
+					
+				</div>
+			</div>>
+			</div>
+
+		</section>
+		<img src="images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+	</section>
+
+</body>
+</html>
