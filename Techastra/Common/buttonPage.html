@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Page</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    
+</head>
+</head>
+<body>
+    <header x-data="
+    {
+      navbarOpen: false,
+      dropdownOpen: false
+    }
+  " >
+
+    <div >
+        <img src="./images/logo/clublogo.png" alt="logo" class="logo">
+    </div>
+</header>
+    <section>
+		<section id="home">
+			<div  class="mainBox" style="display: flex;  justify-items: center;    align-items: center;    flex-direction: column;">
+				<button class="round-btn" id="round1">ROUND 2</button><br>
+				<button class="round-btn" id="round2" disabled>ROUND 3</button>
+			</div>
+			</div>
+		</section>
+		<img src="images/shapes/hero-shape-1.svg" alt="" class="sec-bg-img1" />
+		<img src="images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+	</section>
+</body>
+<script>
+    const round1 = document.getElementById('round1');
+    const round2 = document.getElementById('round2');
+    round1.addEventListener('click', () => {
+        window.location.href = 'https://round2-techastra.onrender.com/';
+    });
+    round2.addEventListener('click', () => {
+        window.location.href = 'https://www.google.com/';
+    });
+</script>
+</html>
