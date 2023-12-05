@@ -10,7 +10,6 @@ encoders = [
 ];
 
 
-
 if (!getCookie("loggedIn")) {
   window.location.href = "./login.html";
 }
@@ -22,6 +21,12 @@ if (getCookie("playedRound1")) {
   window.location.href = "./thanks.html";
 }
 
+setTimeout(()=>{
+  alert("Only 5 Minutes Left Before Quiz Closes");
+},900000)
+setTimeout(()=>{
+  alert("Only 1 Minutes Left Before Quiz Closes");
+},1140000)
 
 function getCookie(cookieName) {
   var cookiesArray = document.cookie.split("; ");
@@ -58,6 +63,7 @@ function markForm() {
   (document.cookie =
     "round1Score=" + finalScore + "; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
     alert("YOUR FINAL SCORE : \n" + finalScore);
+    window.location.href = "./thanks.html"
 }
 
 function decryptAnswer(encAns, ind) {
