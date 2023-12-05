@@ -35,7 +35,9 @@ function handleLogin() {
   document.getElementById("signInButton").disabled = true;
   google.accounts.id.prompt((notification) => {
     if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
-      console.log(notification.)
+      console.log("SKIPPED :  "+notification.getSkippedReason())
+      console.log("NOT DISPLAYED :  "+notification.getNotDisplayedReason())
+      google.accounts.id.cancel();
       document.getElementById("signInButton").disabled = false;
     }
   });
@@ -68,6 +70,7 @@ function handleGoogleSignIn(googleUser) {
     alert(
       "No Team Associated With This E-Mail, Please Log-in With Your Team Laeder's Email"
     );
+    google.accounts.id.cancel();
     document.location.reload();
   }
 }
