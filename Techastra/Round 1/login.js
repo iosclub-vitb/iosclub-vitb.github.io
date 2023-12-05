@@ -38,6 +38,7 @@ function handleLogin() {
       console.log("SKIPPED :  "+notification.getSkippedReason())
       console.log("NOT DISPLAYED :  "+notification.getNotDisplayedReason())
       google.accounts.id.cancel();
+      google.accounts.id.prompt();
       document.getElementById("signInButton").disabled = false;
     }
   });
