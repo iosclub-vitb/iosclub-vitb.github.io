@@ -1,7 +1,7 @@
 teamInfo = { "iosclub@vitbhopal.ac.in": "Tech Team 💫", "prakharswarnkar2022@vitbhopal.ac.in" : "Prakhar's Boobies",
 "aryanshgupta2022@vitbhopal.ac.in" : "Lodu Saala", "agnibhachakraborty2022@vitbhopal.ac.in" : "Tech Team Zindabaad", 
 "pratyushjagdishbirole2022@vitbhopal.ac.in" : "MAC ka CHODAA", "harshita2022@vitbhopal.ac.in" : "Good Girl",
-"bhoumikchopra2022@vitbhopal.com": "Team Chomu"};
+"bhoumikchopra2022@vitbhopal.ac.in": "Team Chomu"};
 
 
 function getCookie(cookieName) {
@@ -35,6 +35,7 @@ function handleLogin() {
   document.getElementById("signInButton").disabled = true;
   google.accounts.id.prompt((notification) => {
     if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+      console.log(notification.)
       document.getElementById("signInButton").disabled = false;
     }
   });
