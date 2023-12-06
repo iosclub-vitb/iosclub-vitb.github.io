@@ -59,7 +59,7 @@ function markForm() {
   }
   var penality = (new Date().getTime() - getCookie("round1StartTime")) / 6000;
 
-  var finalScore = totalPoints - penality;
+  var finalScore = parseInt(totalPoints - penality);
   (document.cookie =
     "round1Score=" + finalScore + "; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
     alert("YOUR FINAL SCORE : \n" + finalScore);
@@ -79,7 +79,10 @@ function submitScore(fnSc) {
       "/?count=" +
       fnSc
   )
-    .then(
+    .then( console.log("https://api.counterapi.dev/v1/round1_techastra/" +
+    teamName +
+    "/set?count=" +
+    fnSc),
       (document.cookie =
         "playedRound1=playedRound1; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
       (window.location.href = "./thanks.html")
