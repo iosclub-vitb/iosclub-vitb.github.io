@@ -63,7 +63,8 @@ function markForm() {
   (document.cookie =
     "round1Score=" + finalScore + "; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
     alert("YOUR FINAL SCORE : \n" + finalScore);
-    window.location.href = "./thanks.html"
+    submitScore(finalScore)
+    window.location.href = "./thanks.html";
 }
 
 function decryptAnswer(encAns, ind) {
