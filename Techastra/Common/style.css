@@ -11,7 +11,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   line-height: inherit;
-
+color: white;
   background: linear-gradient(
     to var(--tw-gradient-to-position, right),
     #080321,
@@ -34,6 +34,13 @@ header {
 header div {
   width: 100%;
 }
+
+#home{
+  display: flex;
+  height: 95vh;
+  justify-content: center;
+  flex-direction: column;
+}
 .logo {
   border-color: currentColor;
   display: block;
@@ -43,10 +50,10 @@ header div {
 }
 
 .round-btn:disabled {
-  background-color: grey;
+  background-color: rgb(178, 178, 178);
 }
 .round-btn:disabled:hover {
-  background-color: grey;
+  background-color: rgb(178, 178, 178);
 }
 .round-btn {
   font-size: 100%;
@@ -55,7 +62,7 @@ header div {
   border-style: solid;
   cursor: pointer;
   height: 3rem;
-  width: 25%;
+  width: 45%;
   border-radius: 0.5rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -64,6 +71,9 @@ header div {
   background-color: rgb(38 65 119 / var(--tw-bg-opacity));
   color: white;
   transition-duration: 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .round-btn:hover {
   background-color: rgb(61 89 146 / var(--tw-bg-opacity));
@@ -73,10 +83,12 @@ header div {
     position: absolute;
     left: 0px;
     top: 0px;
+    max-height: 100vh;
     z-index: -10;
   }
   .sec-bg-img2 {
     position: absolute;
+    max-height: 100vh;
     left: 0px;
     width: 100vw;
     top: 0px;
