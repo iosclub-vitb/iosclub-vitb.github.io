@@ -1,7 +1,7 @@
-teamInfo = { "iosclub@vitbhopal.ac.in": "Tech Team", "prakharswarnkar2022@vitbhopal.ac.in" : "Prakhar's Boobies",
-"aryanshgupta2022@vitbhopal.ac.in" : "Lodu Saala", "agnibhachakraborty2022@vitbhopal.ac.in" : "Tech Team Zindabaad", 
-"pratyushjagdishbirole2022@vitbhopal.ac.in" : "MAC ka CHODAA", "harshita2022@vitbhopal.ac.in" : "Good Girl",
-"bhoumikchopra2022@vitbhopal.ac.in": "TeamChomu", "manultyagi2022@vitbhopal.ac.in":"Quiz-Bee"};
+teamInfo = { "iosclub@vitbhopal.ac.in": "Panel", "prakharswarnkar2022@vitbhopal.ac.in" : "PrakharBoi",
+"aryanshgupta2022@vitbhopal.ac.in" : "SliperyBoi", "agnibhachakraborty2022@vitbhopal.ac.in" : "AgniBoi", 
+"pratyushjagdishbirole2022@vitbhopal.ac.in" : "PratyyBoi", "harshita2022@vitbhopal.ac.in" : "HarshitaBoi",
+"bhoumikchopra2022@vitbhopal.ac.in": "BhoumikBoi", "manultyagi2022@vitbhopal.ac.in":"Quiz-Bee"};
 
 
 function getCookie(cookieName) {

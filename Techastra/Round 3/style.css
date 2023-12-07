@@ -21,7 +21,7 @@ body {
 #s-btn {
   border-radius: 30px;
   border: 2px solid black;
-  padding: 5px;
+  padding: 10px;
   font-weight: 600;
   font-size: 1rem;
   padding-left: 20px;
@@ -32,7 +32,7 @@ body {
   padding-top: 10px;
   border-radius: 50px;
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 10px;
   color: white;
 }
@@ -203,16 +203,10 @@ header div {
   #team-name {
     font-size: 2rem;
   }
-  #s-btn {
-    font-size: 0.8rem;
-  }
 }
 @media screen and (max-width: 356px) {
   #team-name {
     font-size: 1.5rem;
-  }
-  #s-btn {
-    font-size: 0.7rem;
   }
 }
 

@@ -33,31 +33,13 @@ function handleLogin() {
 function initializeGSI() {
   google.accounts.id.initialize({
     client_id:
-      "196275511739-iig5v058mjf6td0gng4qp9tkb1v7j03n.apps.googleusercontent.com",
+      "330379605538-730s4giu41g8dqvsdvi7a66kajebt874.apps.googleusercontent.com",
     callback: handleGoogleSignIn,
     response_type: "token",
   });
 }
 
 function handleGoogleSignIn(googleUser) {
-  const tokenData = JSON.parse(
-    atob(
-      googleUser.credential.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")
-    )
-  );
-  const email = tokenData.email;
-  if (teamInfo[email]) {
-    document.cookie = "loggedIn=loggedIn; expires=Thu, 14 Dec 2023 15:00:00 UTC";
-    document.cookie =
-      "loggedTeamName=" +
-      teamInfo[email] +
-      "; expires=Thu, 14 Dec 2023 15:00:00 UTC";
-      document.location.href='./quiz.html'
-  } else {
-    alert(
-      "No Team Associated With This E-Mail, Please Log-in With Your Team Laeder's Email"
-    );
-    google.accounts.id.cancel();
-    document.location.reload();
-  }
+  document.cookie = "loggedInRound3=loggedInRound3; expires=Thu, 14 Dec 2023 15:00:00 UTC";
+  window.location.href = "./votepage.html"  
 }
