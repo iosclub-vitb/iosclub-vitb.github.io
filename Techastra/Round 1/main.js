@@ -9,7 +9,6 @@ encoders = [
   88, 56, 65, 5, 19, 18, 48, 51, 50, 43,
 ];
 
-
 if (!getCookie("loggedIn")) {
   window.location.href = "./login.html";
 }
@@ -21,12 +20,17 @@ if (getCookie("playedRound1")) {
   window.location.href = "./thanks.html";
 }
 
-setTimeout(()=>{
+setTimeout(() => {
   alert("Only 5 Minutes Left Before Quiz Closes");
-},900000)
-setTimeout(()=>{
+}, 900000);
+setTimeout(() => {
   alert("Only 1 Minutes Left Before Quiz Closes");
-},1140000)
+}, 1140000);
+
+setTimeout(() => {
+  alert("Time Up - Submitting Quiz")
+  markForm(true);
+}, 1200000 );
 
 function getCookie(cookieName) {
   var cookiesArray = document.cookie.split("; ");
@@ -40,7 +44,7 @@ function getCookie(cookieName) {
   return null;
 }
 
-function markForm() {
+function markForm(autoSubmit) {
   var totalPoints = 0;
   for (let question = 0; question < 50; question++) {
     var ansToQuestion = encAnswers[question];
@@ -53,41 +57,45 @@ function markForm() {
         totalPoints += 20;
       }
     } catch (error) {
-      alert("You Missed Question Number : " + (question + 1));
+      if(autoSubmit){
+        continue
+      }
+      else{
+        alert("You Missed Question Number : " + (question + 1));
       return;
+    }
     }
   }
   var penality = (new Date().getTime() - getCookie("round1StartTime")) / 6000;
-
   var finalScore = parseInt(totalPoints - penality);
   (document.cookie =
     "round1Score=" + finalScore + "; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
     alert("YOUR FINAL SCORE : \n" + finalScore);
-    submitScore(finalScore)
-    window.location.href = "./thanks.html";
+   submitScore(finalScore);
 }
 
 function decryptAnswer(encAns, ind) {
   return encAns * 10 - encoders[ind];
 }
 
-async function submitScore(fnSc){
+async function submitScore(fnSc) {
   var teamName = getCookie("loggedTeamName");
-  await fetch(
-    "https://api.counterapi.dev/v1/round1_techastra/" +
-      teamName +
-      "/set?count=" +
-      fnSc
-  )
-    .then( console.log("https://api.counterapi.dev/v1/round1_techastra/" +
-    teamName +
-    "/set?count=" +
-    fnSc),
-      (document.cookie =
-        "playedRound1=playedRound1; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
-      (window.location.href = "./thanks.html")
-    )
-    .catch((error) => {
-      alert("ERROR SUBMITTING, TRY AGAIN");
-    });
+  try {
+    await fetch(
+      "https://api.counterapi.dev/v1/round1_techastra/" +
+        teamName +
+        "/set?count=" +
+        fnSc,
+      {
+        method: "GET"
+      }
+    ).catch(error => console.log("CATTING : " + error));
+
+    document.cookie =
+      "playedRound1=playedRound1; expires=Thu, 14 Dec 2023 15:00:00 UTC";
+    window.location.href = "./thanks.html";
+  } catch (error) {
+    console.log("ERROR : " + error);
+    alert("ERROR SUBMITTING, TRY AGAIN");
+  }
 }
