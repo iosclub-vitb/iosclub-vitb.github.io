@@ -71,12 +71,12 @@ function decryptAnswer(encAns, ind) {
   return encAns * 10 - encoders[ind];
 }
 
-function submitScore(fnSc) {
+async function submitScore(fnSc){
   var teamName = getCookie("loggedTeamName");
-  fetch(
+  await fetch(
     "https://api.counterapi.dev/v1/round1_techastra/" +
       teamName +
-      "/?count=" +
+      "/set?count=" +
       fnSc
   )
     .then( console.log("https://api.counterapi.dev/v1/round1_techastra/" +
