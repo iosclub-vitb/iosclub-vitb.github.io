@@ -9,29 +9,6 @@ encoders = [
   88, 56, 65, 5, 19, 18, 48, 51, 50, 43,
 ];
 
-if (!getCookie("loggedIn")) {
-  window.location.href = "./login.html";
-}
-if (getCookie("round1Score") && !getCookie("playedRound1")) {
-  alert("Quiz Already Attempted, Score Not Submitted\nSUBMITTING SCORE");
-  submitScore(getCookie("round1Score"));
-}
-if (getCookie("playedRound1")) {
-  window.location.href = "./thanks.html";
-}
-
-setTimeout(() => {
-  alert("Only 5 Minutes Left Before Quiz Closes");
-}, 900000);
-setTimeout(() => {
-  alert("Only 1 Minutes Left Before Quiz Closes");
-}, 1140000);
-
-setTimeout(() => {
-  alert("Time Up - Submitting Quiz")
-  markForm(true);
-}, 1200000 );
-
 function getCookie(cookieName) {
   var cookiesArray = document.cookie.split("; ");
   for (var i = 0; i < cookiesArray.length; i++) {
@@ -44,11 +21,34 @@ function getCookie(cookieName) {
   return null;
 }
 
+
+if (!getCookie("loggedIn")) {
+  window.location.href = "./login.html";
+}
+if (getCookie("round1Score") && !getCookie("playedRound1")) {
+  alert("Quiz Already Attempted, Score Not Submitted\nSUBMITTING SCORE");
+  submitScore(getCookie("round1Score"));
+} else if (getCookie("playedRound1")) {
+  window.location.href = "./thanks.html";
+}
+
+setTimeout(() => {
+  alert("Only 5 Minutes Left Before Quiz Closes");
+}, 900000);
+setTimeout(() => {
+  alert("Only 1 Minutes Left Before Quiz Closes");
+}, 1140000);
+
+setTimeout(() => {
+  alert("Time Up - Submitting Quiz");
+  markForm(true);
+}, 1200000);
+
+
 function markForm(autoSubmit) {
   var totalPoints = 0;
   for (let question = 0; question < 50; question++) {
     var ansToQuestion = encAnswers[question];
-    console.log(question);
     try {
       if (
         document.querySelector('input[name="' + (question + 1) + '"]:checked')
@@ -57,21 +57,23 @@ function markForm(autoSubmit) {
         totalPoints += 20;
       }
     } catch (error) {
-      if(autoSubmit){
-        continue
-      }
-      else{
+      if (autoSubmit) {
+        continue;
+      } else {
         alert("You Missed Question Number : " + (question + 1));
-      return;
-    }
+        return;
+      }
     }
   }
   var penality = (new Date().getTime() - getCookie("round1StartTime")) / 6000;
   var finalScore = parseInt(totalPoints - penality);
+  if (finalScore <= 0) {
+    finalScore = 1;
+  }
   (document.cookie =
     "round1Score=" + finalScore + "; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
     alert("YOUR FINAL SCORE : \n" + finalScore);
-   submitScore(finalScore);
+  submitScore(finalScore);
 }
 
 function decryptAnswer(encAns, ind) {
@@ -87,15 +89,14 @@ async function submitScore(fnSc) {
         "/set?count=" +
         fnSc,
       {
-        method: "GET"
+        method: "GET",
       }
-    ).catch(error => console.log("CATTING : " + error));
-
+    ).catch((error) => console.log("CATTING : " + error));
     document.cookie =
       "playedRound1=playedRound1; expires=Thu, 14 Dec 2023 15:00:00 UTC";
     window.location.href = "./thanks.html";
   } catch (error) {
     console.log("ERROR : " + error);
-    alert("ERROR SUBMITTING, TRY AGAIN");
+    alert("ERROR SUBMITTING, Refresh Page To Submit Automatically");
   }
 }

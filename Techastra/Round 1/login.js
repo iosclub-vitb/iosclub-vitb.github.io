@@ -20,16 +20,12 @@ function getCookie(cookieName) {
 if (getCookie("loggedIn")) {
   window.location.href = "./quiz.html";
 }
-if(getCookie("playedRound1")){
-  window.location.href = "./thanks.html"
-}
-
-
-if (getCookie("playedRound1")) {
+if (getCookie("round1Score") && !getCookie("playedRound1")) {
   alert("Quiz Already Attempted, Score Not Submitted\nSUBMITTING SCORE");
-  submitScore(getCookie("playedRound1"));
+  submitScore(getCookie("round1Score"));
+} else if (getCookie("playedRound1")) {
+  window.location.href = "./thanks.html";
 }
-
 
 function handleLogin() {
   document.getElementById("signInButton").disabled = true;
