@@ -1,8 +1,26 @@
-teamInfo = { "iosclub@vitbhopal.ac.in": "Panel", "prakharswarnkar2022@vitbhopal.ac.in" : "PrakharBoi",
-"aryanshgupta2022@vitbhopal.ac.in" : "SliperyBoi", "agnibhachakraborty2022@vitbhopal.ac.in" : "AgniBoi", 
-"pratyushjagdishbirole2022@vitbhopal.ac.in" : "PratyyBoi", "harshita2022@vitbhopal.ac.in" : "HarshitaBoi",
-"bhoumikchopra2022@vitbhopal.ac.in": "BhoumikBoi", "manultyagi2022@vitbhopal.ac.in":"Quiz-Bee"};
-
+teamInfo = {
+  "vikash.23bai10559@vitbhopal.ac.in": "Artificial Intellectuals",
+  "salonichaurasia2022@vitbhopal.ac.in": "Brahmastra",
+  "harshshukla2022@vitbhopal.ac.in": "CodeWarts",
+  "rajaryansharma2022@vitbhopal.ac.in": "CYPHERS",
+  "shelly.23bce11597@vitbhopal.ac.in": "Data Sonic",
+  "manas.23bce11202@vitbhopal.ac.in": "Data Sonic",
+  "tamojit.23mim10125@vitbhopal.ac.in": "Error 404",
+  "anilkumar2022@vitbhopal.ac.in": "FutureDrive",
+  "preeshavashisth2022@vitbhopal.ac.in": "Gojo supremacy",
+  "vidit.23bai10196@vitbhopal.ac.in": "Hustlers",
+  "pranavchaturvedi2022@vitbhopal.ac.in": "Infinite Void",
+  "gauravsingh2022@vitbhopal.ac.in": "Jukebox",
+  "shristi.23bhi10125@vitbhopal.ac.in": "Shristi Jha",
+  "sumitrajtiwari2022@vitbhopal.ac.in": "StarCoders",
+  "devansh.23bce10247@vitbhopal.ac.in": "Team Anonymous",
+  "sarthakjain2022@vitbhopal.ac.in": "Tech Titans",
+  "samridhi.23bai10271@vitbhopal.ac.in": "TECH TITANS",
+  "ansh.23bet10008@vitbhopal.ac.in": "The Caffeine Cowboys",
+  "arihantbisen2022@vitbhopal.ac.in": "VACnA",
+  "himanshu.23bce10450@vitbhopal.ac.in": "VITalize",
+  "shubhraawasthi2022@vitbhopal.ac.in": "Wise quackers"
+};
 
 function getCookie(cookieName) {
   var cookiesArray = document.cookie.split("; ");

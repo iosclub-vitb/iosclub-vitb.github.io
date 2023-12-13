@@ -1,5 +1,5 @@
 encAnswers = [
-  8.4, 1.5, 9.7, 8.1, 1.1, 8, 4, 1.4, 2.7, 7.9, 9.5, 2.7, 7, 2.9, 6.4, 1.5, 8.4,
+  8.4, 1.5, 9.7, 8.1, 1.1, 8, 4, 1.4, 2.7, 7.9, 9.5, 2.7, 7, 2.9, 6.3, 1.5, 8.4,
   5.5, 3.8, 4.6, 5.1, 5.7, 3.2, 3.8, 8, 1.7, 9.7, 2.3, 5, 3, 6.4, 6, 9.3, 8.9,
   7.3, 3.3, 8.9, 0.5, 5.2, 4.9, 9, 5.8, 6.7, 0.6, 2.2, 2, 5.2, 5.4, 5.4, 4.4,
 ];
@@ -47,14 +47,14 @@ setTimeout(() => {
 
 function markForm(autoSubmit) {
   var totalPoints = 0;
-  for (let question = 0; question < 50; question++) {
+  for (let question = 0; question < 30; question++) {
     var ansToQuestion = encAnswers[question];
     try {
       if (
         document.querySelector('input[name="' + (question + 1) + '"]:checked')
           .value == decryptAnswer(ansToQuestion, question)
       ) {
-        totalPoints += 20;
+        totalPoints += 15;
       }
     } catch (error) {
       if (autoSubmit) {
