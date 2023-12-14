@@ -12,7 +12,7 @@ function getCookie(cookieName) {
 }
 
 
-if (getCookie("votedRound3")) {
+if (getCookie("votedRound4")) {
   window.location.href = "./thanks.html";
 }
 

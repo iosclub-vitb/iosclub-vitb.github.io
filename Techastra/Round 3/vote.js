@@ -31,7 +31,7 @@ function submitVote() {
     "https://api.counterapi.dev/v1/round4_techastra/" + teamSelected + "/up"
   )
     .then(
-      (document.cookie = "votedRound3=true; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
+      (document.cookie = "votedRound4=true; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
       (window.location.href = "./thanks.html")
     )
     .catch((error) => {
