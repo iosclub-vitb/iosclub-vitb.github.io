@@ -28,7 +28,7 @@ function submitVote() {
   ).value;
   console.log('https://api.counterapi.dev/v1/round3_techastra/' + teamSelected + '/up')
   fetch(
-    "https://api.counterapi.dev/v1/round3_techastra/" + teamSelected + "/up"
+    "https://api.counterapi.dev/v1/round4_techastra/" + teamSelected + "/up"
   )
     .then(
       (document.cookie = "votedRound3=true; expires=Thu, 14 Dec 2023 15:00:00 UTC"),
