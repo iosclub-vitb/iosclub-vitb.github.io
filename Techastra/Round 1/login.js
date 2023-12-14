@@ -1,9 +1,9 @@
 teamInfo = {
+  "rai.23bcg10083@vitbhopal.ac.in":"Alpha Q",
   "vikash.23bai10559@vitbhopal.ac.in": "Artificial Intellectuals",
   "salonichaurasia2022@vitbhopal.ac.in": "Brahmastra",
   "harshshukla2022@vitbhopal.ac.in": "CodeWarts",
   "rajaryansharma2022@vitbhopal.ac.in": "CYPHERS",
-  "shelly.23bce11597@vitbhopal.ac.in": "Data Sonic",
   "manas.23bce11202@vitbhopal.ac.in": "Data Sonic",
   "tamojit.23mim10125@vitbhopal.ac.in": "Error 404",
   "anilkumar2022@vitbhopal.ac.in": "FutureDrive",
