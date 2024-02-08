@@ -2838,3 +2838,7 @@ input#checkboxLabel:checked ~ .box span {
     padding-left: 5rem;
   }
 }
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
