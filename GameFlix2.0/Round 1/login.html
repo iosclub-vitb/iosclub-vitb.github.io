@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Login | Round 1 | GameFlix 2.0</title>
+    <!-- <link rel="stylesheet" href="tailwind.css" /> -->
+    <link rel="stylesheet" href="login.css" />
+
+    <link rel="shortcut icon" href="../../images/logo/icon.ico" type="image/x-icon">
+  </head>
+  <script src="./login.js"></script>
+  <script
+  src="https://accounts.google.com/gsi/client"
+  onload="initializeGSI()"
+></script>
+  <body>
+    <div style="padding: 2.5%">
+      <img src="../Common/images/logo/clublogo.png" alt="logo" width="125px" />
+    </div>
+
+    <section id="main" style="padding: 2%">
+      <h3 style="color: white; text-align: left; margin: 0; width: 95%;">Instructions :</h3>
+
+      <ul style="width: 90%;">
+        <li>
+          Don't Refresh The Quiz Page. It Will Result In Lose Of Your Progress
+        </li>
+        <li>
+          You Should Only Refresh The Quiz Page After Pressing Submit Button
+          That Too Only When Submitting Fails.
+        </li>
+        <li>
+          Attempting Quiz Doesn't Requires Network Connectivity, BUT Submitting
+          Quiz Does
+        </li>
+        <li>
+          If You Get Error Pop-up After Clicking Submit, Just Refresh The Page
+          And Your Score Will Be Submitted
+        </li>
+      </ul>
+<br>
+      <button id="signInButton" onclick="handleLogin()">
+        <img
+          width="30"
+          height="30"
+          src="https://img.icons8.com/color/30/google-logo.png"
+          alt="google-logo"
+        />
+        <span>Sign In With Google</span>
+      </button>
+      <p style="color: white">Use Team Leader's College ID To Sign In</p>
+
+      <div class="img-holder">
+        <img
+          src="../Common/images/shapes/hero-shape-2.svg"
+          alt=""
+          class="img-2"
+          width="100%"
+        />
+      </div>
+    </section>
+
+    <div style="text-align: center; font-size: small">
+      &copy; Tech Team - iOS Club
+    </div>
+  </body>
+<script src="./main.js"></script>
+<script>
+      if (getCookie("loggedIn")) {
+    window.location.href = "./section1.html";
+  }
+</script>
+</html>
