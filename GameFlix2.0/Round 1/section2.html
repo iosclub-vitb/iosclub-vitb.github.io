@@ -1,186 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz | Round 1 | GameFlix</title>
-    <link rel="shortcut icon" href="../../images/logo/icon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../../images/logo/icon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<script src="./main.js"></script>
-<script>
-          if (!getCookie("loggedIn")) {
-    window.location.href = "./login.html";
-  }
-  if (!getCookie("section1Score")) {
-    window.location.href = "./section1.html";
-  }
-  if (getCookie("section2Score")) {
-    window.location.href = "./section3.html";
-  }
-</script>
+  <script src="./main.js"></script>
+  <script>
+    if (!getCookie("loggedIn")) {
+      window.location.href = "./login.html";
+    }
+    if (!getCookie("section1Score")) {
+      window.location.href = "./section1.html";
+    }
+    if (getCookie("section2Score")) {
+      window.location.href = "./section3.html";
+    }
+  </script>
 
-<body>
-    <header style="position: sticky !important" x-data=" {  navbarOpen: false,  dropdownOpen: false } ">
-        <div class="w-[100%]">
-            <img src="../Common/images/logo/clublogo.png" alt="logo" class="logo" style="margin: 2.5%; width: 125px" />
-        </div>
+  <body>
+    <header
+      style="position: sticky !important"
+      x-data=" {  navbarOpen: false,  dropdownOpen: false } "
+    >
+      <div class="w-[100%]">
+        <img
+          src="../Common/images/logo/clublogo.png"
+          alt="logo"
+          class="logo"
+          style="margin: 2.5%; width: 125px"
+        />
+      </div>
     </header>
 
     <section class="home">
-        <section id="home">
-            <!-- Question 1 -->
-            <div class="form-div">
-                <audio controls>
-                    <source src="path_to_your_audio_file.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <form name="sec-2-0" class="form-section space-y-8 options">
-                    <br />
-                    <div>
-                        <input type="radio" name="1" value="1" />
-                        <label>Option A</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="2" />
-                        <label>Option B</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="3" />
-                        <label>Option C</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="4" />
-                        <label>Option D</label> <br />
-                    </div>
-                </form>
+      <section id="home">
+        <!-- Question 1 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <form name="sec-2-0" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Option A</label> <br />
             </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Option B</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Option C</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Option D</label> <br />
+            </div>
+          </form>
+        </div>
 
-            <!-- Question 2 -->
-            <div class="form-div">
-                <audio controls>
-                    <source src="path_to_your_audio_file.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <form name="sec-2-1" class="form-section space-y-8 options">
-                    <br />
-                    <div>
-                        <input type="radio" name="1" value="1" />
-                        <label>Option A</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="2" />
-                        <label>Option B</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="3" />
-                        <label>Option C</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="4" />
-                        <label>Option D</label> <br />
-                    </div>
-                </form>
+        <!-- Question 2 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <form name="sec-2-1" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Option A</label> <br />
             </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Option B</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Option C</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Option D</label> <br />
+            </div>
+          </form>
+        </div>
 
-            <!-- Question 3 -->
-            <div class="form-div">
-                <audio controls>
-                    <source src="path_to_your_audio_file.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <form name="sec-2-2" class="form-section space-y-8 options">
-                    <br />
-                    <div>
-                        <input type="radio" name="1" value="1" />
-                        <label>Option A</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="2" />
-                        <label>Option B</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="3" />
-                        <label>Option C</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="4" />
-                        <label>Option D</label> <br />
-                    </div>
-                </form>
+        <!-- Question 3 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <form name="sec-2-2" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Option A</label> <br />
             </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Option B</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Option C</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Option D</label> <br />
+            </div>
+          </form>
+        </div>
 
-            <!-- Question 4 -->
-            <div class="form-div">
-                <audio controls>
-                    <source src="path_to_your_audio_file.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <form name="sec-2-3" class="form-section space-y-8 options">
-                    <br />
-                    <div>
-                        <input type="radio" name="1" value="1" />
-                        <label>Option A</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="2" />
-                        <label>Option B</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="3" />
-                        <label>Option C</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="4" />
-                        <label>Option D</label> <br />
-                    </div>
-                </form>
+        <!-- Question 4 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <form name="sec-2-3" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Option A</label> <br />
             </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Option B</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Option C</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Option D</label> <br />
+            </div>
+          </form>
+        </div>
 
-            <!-- Question 5 -->
-            <div class="form-div">
-                <audio controls>
-                    <source src="path_to_your_audio_file.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <form name="sec-2-4" class="form-section space-y-8 options">
-                    <br />
-                    <div>
-                        <input type="radio" name="1" value="1" />
-                        <label>Option A</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="2" />
-                        <label>Option B</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="3" />
-                        <label>Option C</label> <br />
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="4" />
-                        <label>Option D</label> <br />
-                    </div>
-                </form>
+        <!-- Question 5 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <form name="sec-2-4" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Option A</label> <br />
             </div>
-            <div class="button">
-                <button class="next">Next</button>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Option B</label> <br />
             </div>
-        </section>
-        <img src="../Common/images/shapes/hero-shape-1.svg" alt="" class="sec-bg-img1" />
-        <img src="../Common/images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Option C</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Option D</label> <br />
+            </div>
+          </form>
+        </div>
+        <div class="button">
+          <button class="next">Next</button>
+        </div>
+      </section>
+      <img
+        src="../Common/images/shapes/hero-shape-1.svg"
+        alt=""
+        class="sec-bg-img1"
+      />
+      <img
+        src="../Common/images/shapes/hero-shape-2.svg"
+        alt=""
+        class="sec-bg-img2"
+      />
     </section>
-</body>
-<script src="./main.js"></script>
-<script>
-
-document.cookie =
-        "round2Start=" + new Date().getTime() + "; expires=Tue, 20 Feb 2024 23:00:00 UTC";
+  </body>
+  <script src="./main.js"></script>
+  <script>
+    document.cookie =
+      "round2Start=" +
+      new Date().getTime() +
+      "; expires=Tue, 20 Feb 2024 23:00:00 UTC";
     document.querySelector(".next").addEventListener("click", () => {
-        window.location.href = "./section3.html";
+      window.location.href = "./section3.html";
     });
-</script>
-
+  </script>
 </html>
