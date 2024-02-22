@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  color: white  ;
+  color: white;
   margin: 0;
   line-height: inherit;
   font-family: sans-serif;
@@ -20,7 +20,7 @@ body {
   );
 }
 
-audio{
+audio {
   width: 100%;
 }
 
@@ -60,6 +60,9 @@ header {
   background-color: rgba(17, 25, 40, 0.75);
   overflow: auto;
   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+p {
+  text-align: center;
 }
 
 .form-div {
@@ -135,7 +138,7 @@ header {
   position: absolute;
   right: 0px;
   top: 0px;
-  
+
   width: 100%;
   z-index: -10;
 }
