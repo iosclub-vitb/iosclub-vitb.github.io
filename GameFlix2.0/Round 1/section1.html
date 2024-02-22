@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz | Round 1 | GameFlix</title>
-    <link
-      rel="shortcut icon"
-      href="../../images/logo/icon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <script src="./main.js"></script>
-  <script>
-    if (!getCookie("loggedIn")) {
-      window.location.href = "./login.html";
-    }
-    if (getCookie("section1Score")) {
-      window.location.href = "./section2.html";
-    }
-  </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz | Round 1 | GameFlix</title>
+  <link rel="shortcut icon" href="../../images/logo/icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body>
-    <header
-      style="position: sticky !important"
-      x-data=" {  navbarOpen: false,  dropdownOpen: false } "
-    >
-      <div class="w-[100%]">
-        <img
-          src="../Common/images/logo/clublogo.png"
-          alt="logo"
-          class="logo"
-          style="margin: 2.5%; width: 125px"
-        />
-      </div>
-    </header>
+<script src="./main.js"></script>
+<script>
+  if (!getCookie("loggedIn")) {
+    window.location.href = "./login.html";
+  }
+  if (getCookie("section1Score")) {
+    window.location.href = "./section2.html";
+  }
+</script>
 
-    <section>
-      <section id="home">
-        <h5 style="margin-bottom: 0; text-align: center;""> Attempt Your Quiz
-        <h1 style="margin-top: 0" id="team-name">TEAMNAME</h1>
+<body>
+  <header style="position: sticky !important" x-data=" {  navbarOpen: false,  dropdownOpen: false } ">
+    <div class="w-[100%]">
+      <img src="../Common/images/logo/clublogo.png" alt="logo" class="logo" style="margin: 2.5%; width: 125px" />
+    </div>
+  </header>
+
+  <section>
+    <section id="home">
+      <h5 style="margin-bottom: 0; text-align: center;""> Attempt Your Quiz
+        <h1 style=" margin-top: 0" id="team-name">TEAMNAME</h1>
 
         <br />
+        <div>
+          <p>
+            Level One: <br />
+            Following are famous dialogues from “13 Reasons Why”, by carefully listening to them you have to identify
+            the
+            character who said it from the series.
+          </p>
+        </div>
         <!-- Question 1 -->
         <div class="form-div">
           <audio controls>
-            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+            <source src="./audio/audio clip 1.mp3" type="audio/mpeg" />
           </audio>
           <form name="sec-1-0" class="form-section space-y-8 options">
             <br />
             <div>
               <input type="radio" name="1" value="1" />
-              <label>Option A</label> <br />
+              <label>Hannah Baker</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="2" />
-              <label>Option B</label> <br />
+              <label>Jessica Davis</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="3" />
-              <label>Option C</label> <br />
+              <label>Chloe Rice</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="4" />
-              <label>Option D</label> <br />
+              <label>Mrs. Baker</label> <br />
             </div>
           </form>
         </div>
@@ -73,26 +69,25 @@
         <!-- Question 2 -->
         <div class="form-div">
           <audio controls>
-            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+            <source src="./audio/audio clip 2.mp3" type="audio/mpeg" />
           </audio>
           <form name="sec-1-1" class="form-section space-y-8 options">
             <br />
             <div>
               <input type="radio" name="1" value="1" />
-              <label>Option A</label> <br />
+              <label>Alex Standall</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="2" />
-              <label>Option B</label> <br />
+              <label>Clay Jensen</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="3" />
-              <label>Option C</label> <br />
+              <label>Tyler Down</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="4" />
-              <label>Option D</label> <br />
+              <label>Tony Padilla</label> <br />
             </div>
           </form>
         </div>
@@ -100,54 +95,46 @@
         <!-- Question 3 -->
         <div class="form-div">
           <audio controls>
-            <source src="path_to_your_audio_file.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+            <source src="./audio/audio clip 3.mp3" type="audio/mpeg" />
           </audio>
           <form name="sec-1-2" class="form-section space-y-8 options">
             <br />
             <div>
               <input type="radio" name="1" value="1" />
-              <label>Option A</label> <br />
+              <label>Hannah Baker and Clay Jensen</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="2" />
-              <label>Option B</label> <br />
+              <label>Jessica Davis and Clay Jensen</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="3" />
-              <label>Option C</label> <br />
+              <label>Mr Baker and Mrs. Baker</label> <br />
             </div>
             <div>
               <input type="radio" name="1" value="4" />
-              <label>Option D</label> <br />
+              <label>Jessica Davis and Justin Foley</label> <br />
             </div>
           </form>
         </div>
         <div>
           <button class="next">Next</button>
         </div>
-      </section>
-      <img
-        src="../Common/images/shapes/hero-shape-1.svg"
-        alt=""
-        class="sec-bg-img1"
-      />
-      <img
-        src="../Common/images/shapes/hero-shape-2.svg"
-        alt=""
-        class="sec-bg-img2"
-      />
     </section>
-  </body>
-  <script>
-    document.getElementById("team-name").innerText =
-      getCookie("loggedTeamName");
-    document.cookie =
-      "round1Start=" +
-      new Date().getTime() +
-      "; expires=Tue, 20 Feb 2024 23:00:00 UTC";
-    document.querySelector(".next").addEventListener("click", () => {
-      section1Score();
-    });
-  </script>
+    <img src="../Common/images/shapes/hero-shape-1.svg" alt="" class="sec-bg-img1" />
+    <img src="../Common/images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+  </section>
+</body>
+<script>
+  document.getElementById("team-name").innerText =
+    getCookie("loggedTeamName");
+  document.cookie =
+    "round1Start=" +
+    new Date().getTime() +
+    "; expires=Tue, 20 Feb 2024 23:00:00 UTC";
+  document.querySelector(".next").addEventListener("click", () => {
+    section1Score();
+  });
+</script>
+
 </html>
