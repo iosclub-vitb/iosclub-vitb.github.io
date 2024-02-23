@@ -191,14 +191,25 @@
   submitBtn.addEventListener("click", () => {
     section3Score();
   });
+  var switchTab = 0;
 
-  document.addEventListener('visibilitychange', function(e) {
-    var isPageActive = !document.hidden;
+  document.addEventListener("visibilitychange", function (e) {
+      var isPageActive = !document.hidden;
 
-    if(!isPageActive){
-      alert("You Are Not Allowed To Open Anything Else, Doing So Next Time Will Lead To Disqualification.")
+      if (!isPageActive) {
+        switchTab++;
+        alert(
+          "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Doing So Next Time Will Lead To Penality."
+        );
+        if (switchTab > 1) {
+          alert(
+          "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Penality : -15."
+        );
+        }
+      }
     }
-  });
+    );
+  
 
 </script>
 
