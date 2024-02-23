@@ -37,7 +37,7 @@ function section1Score() {
   var finalScore = parseInt(score - penality);
   finalScore = finalScore <= 0 ? 1 : finalScore;
   document.cookie =
-    "section1Score=" + finalScore + "; expires=Fri, 23 Feb 2024 23:00:00 UTC";
+    "section1Score=" + finalScore + "; expires=Sat, 24 Feb 2024 23:00:00 UTC";
   window.location.href = "./section2.html";
 }
 
@@ -61,7 +61,7 @@ function section2Score() {
   var finalScore = parseInt(score - penality);
   finalScore = finalScore <= 0 ? 1 : finalScore;
   document.cookie =
-    "section2Score=" + finalScore + "; expires=Fri, 23 Feb 2024 23:00:00 UTC";
+    "section2Score=" + finalScore + "; expires=Sat, 24 Feb 2024 23:00:00 UTC";
   window.location.href = "./section3.html";
 }
 
@@ -85,7 +85,7 @@ function section3Score() {
   var finalScore = parseInt(score - penality);
   finalScore = finalScore <= 0 ? 1 : finalScore;
   document.cookie =
-    "section3Score=" + finalScore + "; expires=Fri, 23 Feb 2024 23:00:00 UTC";
+    "section3Score=" + finalScore + "; expires=Sat, 24 Feb 2024 23:00:00 UTC";
   submitFinalScore();
 }
 
@@ -129,7 +129,7 @@ async function submitFinalScore() {
       }
     ).catch((error) => console.log("CATCHING : " + error));
     document.cookie =
-      "playedRound1=playedRound1; expires=Fri, 23 Feb 2024 23:00:00 UTC";
+      "playedRound1=playedRound1; expires=Sat, 24 Feb 2024 23:00:00 UTC";
     window.location.href = "./thanks.html";
   } catch (error) {
     console.log("ERROR : " + error);

@@ -145,30 +145,35 @@
     </section>
   </body>
   <script>
-    var switchTab = 0;
     document.getElementById("team-name").innerText =
       getCookie("loggedTeamName");
     document.cookie =
       "round1Start=" +
       new Date().getTime() +
-      "; expires=Fri, 23 Feb 2024 23:00:00 UTC";
+      "; expires=Sat, 24 Feb 2024 23:00:00 UTC";
     document.querySelector(".next").addEventListener("click", () => {
       section1Score();
     });
-    document.addEventListener("visibilitychange", function (e) {
+    var switchTab = 0;
+
+  document.addEventListener("visibilitychange", function (e) {
       var isPageActive = !document.hidden;
 
       if (!isPageActive) {
+        if (switchTab > 1) {
+          alert(
+          "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Penality : -15."
+        );
+        } else {
         switchTab++;
         alert(
           "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Doing So Next Time Will Lead To Penality."
         );
-        if (switchTab > 1) {
-          alert(
-            "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Penality : -15."
-          );
+        
         }
       }
-    });
+    }
+    );
+  
   </script>
 </html>
