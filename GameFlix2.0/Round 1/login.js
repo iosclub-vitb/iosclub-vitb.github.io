@@ -65,11 +65,11 @@ function handleGoogleSignIn(googleUser) {
   );
   const email = tokenData.email;
   if (teamInfo[email]) {
-    document.cookie = "loggedIn=loggedIn; expires=Tue, 20 Feb 2024 23:00:00 UTC";
+    document.cookie = "loggedIn=loggedIn; expires=Fri, 23 Feb 2024 23:00:00 UTC";
     document.cookie =
       "loggedTeamName=" +
       teamInfo[email] +
-      "; expires=Tue, 20 Feb 2024 23:00:00 UTC";
+      "; expires=Fri, 23 Feb 2024 23:00:00 UTC";
       document.location.href='./section1.html'
   } else {
     alert(

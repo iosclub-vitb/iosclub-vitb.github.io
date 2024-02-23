@@ -32,11 +32,12 @@
   <section class="home">
     <section id="home">
       <div>
-        <p>
-          Level Two: <br />
+        <div style="text-align: center">
+          <h3 >Level Two:</h3>
+          <h4 style="margin-top: -10px;">
           Following are famous dialogues from different Netflix series and movies. By carefully listening them you have
           to identify the name of the movie/series.
-        </p>
+          </h4>
       </div>
       <!-- Question 1 -->
       <div class="form-div">
@@ -180,9 +181,16 @@
   document.cookie =
     "round2Start=" +
     new Date().getTime() +
-    "; expires=Tue, 20 Feb 2024 23:00:00 UTC";
+    "; expires=Fri, 23 Feb 2024 23:00:00 UTC";
   document.querySelector(".next").addEventListener("click", () => {
     section2Score();
+  });
+  document.addEventListener('visibilitychange', function(e) {
+    var isPageActive = !document.hidden;
+
+    if(!isPageActive){
+      alert("You Are Not Allowed To Open Anything Else, Doing So Next Time Will Lead To Disqualification.")
+    }
   });
 </script>
 
