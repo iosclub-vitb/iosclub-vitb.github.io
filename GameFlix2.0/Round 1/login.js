@@ -1,4 +1,6 @@
 teamInfo = {
+  "aryansaxena2022@vitbhopal.ac.in" : "Alpha One",
+  "harshchaturvedi2022@vitbhopal.ac.in" : "Meth",
   "iosclub@vitbhopal.ac.in": "PAPA JIII",
   "harshita2022@vitbhopal.ac.in": "Download Weathery Nowww!!!",
   "pratyushjagdishbirole2022@vitbhopal.ac.in": "Download Weathery Nowww!!!",
