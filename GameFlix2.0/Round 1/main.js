@@ -91,15 +91,15 @@ function section3Score() {
 
 setTimeout(() => {
   alert("Only 5 Minutes Left Before Quiz Closes");
-}, 900000);
+}, 2400000);
 setTimeout(() => {
   alert("Only 1 Minutes Left Before Quiz Closes");
-}, 1140000);
+}, 2640000);
 
 setTimeout(() => {
   alert("Time Up - Submitting Quiz");
-  markForm(true);
-}, 1200000);
+  submitFinalScore();
+}, 2700000);
 
 async function submitFinalScore() {
   fnSc = 0;
