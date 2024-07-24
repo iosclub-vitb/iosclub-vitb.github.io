@@ -1148,6 +1148,10 @@ body {
 .a1L {
   flex-wrap: wrap;
 }
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
 
 .a4O {
   align-items: flex-start;
