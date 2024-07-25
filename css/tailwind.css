@@ -1148,6 +1148,10 @@ body {
 .a1L {
   flex-wrap: wrap;
 }
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
 
 .a4O {
   align-items: flex-start;
@@ -2590,7 +2594,8 @@ input#checkboxLabel:checked ~ .box span {
   }
 
   .lg\:a1M\/3 {
-    width: 33.333333%;
+    width: 30.333333%;
+    margin: auto;
   }
 
   .lg\:a33\/12 {
@@ -2624,7 +2629,11 @@ input#checkboxLabel:checked ~ .box span {
   .lg\:a1f {
     padding: 1rem;
   }
-
+.ad4{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
   .lg\:a29 {
     padding: 2rem;
   }
