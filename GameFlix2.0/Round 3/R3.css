@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.sec-bg-img1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  max-height: 100vh;
+  z-index: -10;
+}
+.sec-bg-img2 {
+  position: absolute;
+  max-height: 100vh;
+  left: 0px;
+  width: 100vw;
+  top: 0px;
+  z-index: -10;
+}
+
+body {
+  /* background: url(https://images.freeimages.com/images/large-previews/b65/lunar-1175693.jpg?fmt=webp&h=350); */
+  width: 100%;
+  background-attachment: fixed;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(8 3 33);
+}
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+
+.card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container {
+  
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 90vw;
+  height: auto;
+  background: rgba(69, 69, 69, 0.533);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(207, 207, 207, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.83); /* Not yet supported
+    /* box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.7); */
+  /* position: relative; */
+  /* background: inherit; */
+  z-index: 1;
+  position: relative;
+}
+
+/* .container:before{
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: -1;
+
+} */
+
+a {
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: 700;
+  margin: 0.75rem;
+  cursor: pointer;
+  height: 3rem;
+  width: 75%;
+  border-radius: 20px;
+  transition-duration: 200ms;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a button {
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapped {
+  /* margin-top: 70px; */
+  position: relative;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

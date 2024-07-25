@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz | Round 1 | GameFlix</title>
+  <link rel="shortcut icon" href="../../images/logo/icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script src="./main.js"></script>
+<script>
+  if (!getCookie("loggedIn")) {
+    window.location.href = "./login.html";
+  }
+  if (!getCookie("section1Score")) {
+    window.location.href = "./section1.html";
+  }
+  if (getCookie("section2Score")) {
+    window.location.href = "./section3.html";
+  }
+</script>
+
+<body>
+  <header style="position: sticky !important" x-data=" {  navbarOpen: false,  dropdownOpen: false } ">
+    <div class="w-[100%]">
+      <img src="../Common/images/logo/clublogo.png" alt="logo" class="logo" style="margin: 2.5%; width: 125px" />
+    </div>
+  </header>
+
+  <section class="home">
+    <section id="home">
+      <div>
+        <div style="text-align: center">
+          <h3>Level Two:</h3>
+          <h4 style="margin-top: -10px;">
+            Following are famous dialogues from different Netflix series and movies. By carefully listening them you
+            have
+            to identify the name of the movie/series.
+          </h4>
+        </div>
+        <!-- Question 1 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="./audio/audio clip 4.mp3" type="audio/mpeg" />
+          </audio>
+          <form name="sec-2-0" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Zindagi na Milegi Dobara</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Dil Dhadakne Do</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Luck by Chance</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Bhaag Milkha Bhaag</label> <br />
+            </div>
+          </form>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="./audio/audio clip 5.mp3" type="audio/mpeg" />
+          </audio>
+          <form name="sec-2-1" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Kal Ho Na Ho</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Dear Zindagi</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Ae Dil Hai Mushkil</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Dilwale</label> <br />
+            </div>
+          </form>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="./audio/audio clip 6.mp3" type="audio/mpeg" />
+          </audio>
+          <form name="sec-2-2" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>One Piece </label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Death Note</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Bleach</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Naruto</label> <br />
+            </div>
+          </form>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="./audio/audio clip 7.mp3" type="audio/mpeg" />
+          </audio>
+          <form name="sec-2-3" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Ginny and Georgia</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Never Have I Ever</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Glimory Girls</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Enola Holmes</label> <br />
+            </div>
+          </form>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="form-div">
+          <audio controls>
+            <source src="./audio/audio clip 8.mp3" type="audio/mpeg" />
+          </audio>
+          <form name="sec-2-4" class="form-section space-y-8 options">
+            <br />
+            <div>
+              <input type="radio" name="1" value="1" />
+              <label>Little Things</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="2" />
+              <label>Mismatched</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="3" />
+              <label>Dear Zindagi</label> <br />
+            </div>
+            <div>
+              <input type="radio" name="1" value="4" />
+              <label>Queen</label> <br />
+            </div>
+          </form>
+        </div>
+        <div class="button">
+          <button class="next">Next</button>
+        </div>
+    </section>
+    <img src="../Common/images/shapes/hero-shape-1.svg" alt="" class="sec-bg-img1" />
+    <img src="../Common/images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+  </section>
+</body>
+<script src="./main.js"></script>
+<script>
+  document.cookie =
+    "round2Start=" +
+    new Date().getTime() +
+    "; expires=Sat, 24 Feb 2024 23:00:00 UTC";
+  document.querySelector(".next").addEventListener("click", () => {
+    section2Score();
+  });
+  
+  var switchTab = 0;
+
+document.addEventListener("visibilitychange", function (e) {
+    var isPageActive = !document.hidden;
+
+    if (!isPageActive) {
+      if (switchTab > 1) {
+        alert(
+        "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Penality : -15."
+      );
+      } else {
+      switchTab++;
+      alert(
+        "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Doing So Next Time Will Lead To Penality."
+      );
+      
+      }
+    }
+  }
+  );
+
+</script>
+
+</html>

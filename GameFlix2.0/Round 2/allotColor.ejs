@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rate <%= teamName %> | Round 2 | GameFlix2.0</title>
+
+    <!-- <link rel="stylesheet" href="tailwind.css" /> -->
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="vote.css" />
+  </head>
+  <body style="width: 100vw;">
+    <div style="padding: 2.5%">
+      <img src="./images/logo/clublogo.png" alt="logo" width="125px" />
+    </div>
+
+    <section id="main" style="height: 80vh; padding: 7.5%;">
+      <label for="rate" style='width:100%'>
+        Submit Code
+
+        <p id="team-name"><%= teamName %></p>
+      </label>
+
+      <form action="/validate" method="post">
+        <input type="text" name="passcode" id="passcode" placeholder="Secret Code"/>
+        <input type="hidden" name="teamName" value="<%= teamName %>">
+      
+      <button id="submit" type="submit">Submit</button>
+      </form>
+
+    </section>
+    <div class="img-holder i1">
+      <img src="images/shapes/hero-shape-1.svg" alt="" />
+    </div>
+    <div class="img-holder">
+      <img src="images/shapes/hero-shape-2.svg" alt="" />
+    </div>
+    <div style="text-align: center; font-size: small">
+      &copy; Tech Team - iOS Club
+    </div>
+    <script >
+  
+ </script>
+  </body>
+</html>

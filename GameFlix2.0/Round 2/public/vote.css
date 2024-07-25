@@ -1,0 +1,44 @@
+
+label{
+  font-size: 1.3rem;
+  font-weight: 600;
+  
+}
+#team-name{
+  font-size: 2rem;
+  font-weight: 1000;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  
+}
+#score{
+  font-size: 1rem;
+  /* padding-right: 160px; */
+  padding-top: 10px;
+  font-weight: 600;
+}
+#submit{
+  margin-top: 20px;
+  font-size: 1.2rem;
+  transition-duration: 150ms;
+
+}
+#submit:disabled{
+  
+  background-color: #848e96;
+  /* font-size: 1rem; */
+}
+
+
+input[type="text"] {
+  width: 90%;
+  font-size: 1rem;
+  padding: 2.5% ;
+  border-radius: 7.50px;
+  outline: none;
+}
+
+form{
+  width: 100%;
+  text-align: center;
+}

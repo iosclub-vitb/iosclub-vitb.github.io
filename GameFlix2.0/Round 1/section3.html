@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz | Round 1 | GameFlix</title>
+  <link rel="shortcut icon" href="../../images/logo/icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script src="./main.js"></script>
+<script>
+  if (!getCookie("loggedIn")) {
+    window.location.href = "./login.html";
+  }
+
+  if (!getCookie("section1Score")) {
+    window.location.href = "./section1.html";
+  }
+  if (!getCookie("section2Score")) {
+    window.location.href = "./section2.html";
+  }
+  if (getCookie("section3Score") && !getCookie("playedRound1")) {
+    alert("You have already attempted this section, Submitting Score");
+    submitFinalScore();
+  }
+  if (getCookie("section3Score")) {
+    window.location.href = "./thanks.html";
+  }
+</script>
+
+<body>
+  <header style="position: sticky !important" x-data=" {  navbarOpen: false,  dropdownOpen: false } ">
+    <div class="w-[100%]">
+      <img src="../Common/images/logo/clublogo.png" alt="logo" class="logo" style="margin: 2.5%; width: 125px" />
+    </div>
+  </header>
+
+  <section class="home">
+    <section id="home">
+      <div>
+        <div style="text-align: center">
+          <h3 >Level Three:</h3>
+          <h4 style="margin-top: -10px;">
+          Following are title tracks from different Netflix series and movies. By carefully listening them you have to
+          identify the name of the movie/series.
+          </h4>
+      </div>
+      <!-- Question 1 -->
+      <div class="form-div">
+        <audio controls>
+          <source src="./audio/audio clip 9.mp3" type="audio/mpeg" />
+        </audio>
+        <form name="sec-3-0" class="form-section space-y-8 options">
+          <br />
+          <div>
+            <input type="radio" name="1" value="1" />
+            <label>Om Shanti Om</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="2" />
+            <label>Kabhi Khushi Kabhi Gham</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="3" />
+            <label>Kuch Kuch Hota hai</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="4" />
+            <label>Dil Se</label> <br />
+          </div>
+        </form>
+      </div>
+      <!-- Question 2 -->
+      <div class="form-div">
+        <audio controls>
+          <source src="./audio/audio clip 10.mp3" type="audio/mpeg" />
+        </audio>
+        <form name="sec-3-1" class="form-section space-y-8 options">
+          <br />
+          <div>
+            <input type="radio" name="1" value="1" />
+            <label>Kabir Singh</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="2" />
+            <label>Animal</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="3" />
+            <label>Mirzapur</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="4" />
+            <label>Tanaji</label> <br />
+          </div>
+        </form>
+      </div>
+      <!-- Question 3 -->
+      <div class="form-div">
+        <audio controls>
+          <source src="./audio/audio clip 11.mp3" type="audio/mpeg" />
+        </audio>
+        <form name="sec-3-2" class="form-section space-y-8 options">
+          <br />
+          <div>
+            <input type="radio" name="1" value="1" />
+            <label>Friends</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="2" />
+            <label>Suits</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="3" />
+            <label>Big Bang Theory</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="4" />
+            <label>How I met Your Mother</label> <br />
+          </div>
+        </form>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="form-div">
+        <audio controls>
+          <source src="./audio/audio clip 12.mp3" type="audio/mpeg" />
+        </audio>
+        <form name="sec-3-3" class="form-section space-y-8 options">
+          <br />
+          <div>
+            <input type="radio" name="1" value="1" />
+            <label>Sacred Games</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="2" />
+            <label>Jamtara</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="3" />
+            <label>Kohhra</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="4" />
+            <label>Ghoul</label> <br />
+          </div>
+        </form>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="form-div">
+        <audio controls>
+          <source src="./audio/audio clip 13.mp3" type="audio/mpeg" />
+        </audio>
+        <form name="sec-3-4" class="form-section space-y-8 options">
+          <br />
+          <div>
+            <input type="radio" name="1" value="1" />
+            <label>Stranger Things</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="2" />
+            <label>You</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="3" />
+            <label>Riverdale</label> <br />
+          </div>
+          <div>
+            <input type="radio" name="1" value="4" />
+            <label>Bridgerton</label> <br />
+          </div>
+        </form>
+      </div>
+      <div class="button">
+        <button class="submit-btn">Submit</button>
+      </div>
+    </section>
+    <img src="../Common/images/shapes/hero-shape-1.svg" alt="" class="sec-bg-img1" />
+    <img src="../Common/images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+  </section>
+</body>
+<script>
+  document.cookie =
+    "round3Start=" +
+    new Date().getTime() +
+    "; expires=Sat, 24 Feb 2024 23:00:00 UTC";
+
+  const submitBtn = document.querySelector(".submit-btn");
+  submitBtn.addEventListener("click", () => {
+    section3Score();
+  });
+  var switchTab = 0;
+
+  document.addEventListener("visibilitychange", function (e) {
+      var isPageActive = !document.hidden;
+
+      if (!isPageActive) {
+        if (switchTab > 1) {
+          alert(
+          "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Penality : -15."
+        );
+        } else {
+        switchTab++;
+        alert(
+          "⚠️ WARNING ⚠️ You Are Not Allowed To Open Anything Else, Doing So Next Time Will Lead To Penality."
+        );
+        
+        }
+      }
+    }
+    );
+  
+
+</script>
+
+</html>
