@@ -2594,7 +2594,8 @@ input#checkboxLabel:checked ~ .box span {
   }
 
   .lg\:a1M\/3 {
-    width: 33.333333%;
+    width: 30.333333%;
+    margin: auto;
   }
 
   .lg\:a33\/12 {
