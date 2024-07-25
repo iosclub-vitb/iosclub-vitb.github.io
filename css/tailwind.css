@@ -2628,7 +2628,11 @@ input#checkboxLabel:checked ~ .box span {
   .lg\:a1f {
     padding: 1rem;
   }
-
+.ad4{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
   .lg\:a29 {
     padding: 2rem;
   }
