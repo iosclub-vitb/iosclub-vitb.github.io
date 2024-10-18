@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Techastra | iOS Club</title>
+    <link rel="shortcut icon" href="../../images/logo/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header
+      x-data="
+    {
+      navbarOpen: false,
+      dropdownOpen: false
+    }
+  "
+    >
+      <div>
+        <img
+          src="./images/logo/clublogo.png"
+          alt="logo"
+          class="logo"
+          style="padding: 20px; width: 120px"
+        />
+      </div>
+    </header>
+    <section>
+      <section id="home">
+        <div
+          class="mainBox"
+          style="
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+          "
+        >
+          <button
+            class="round-btn"
+            onclick="javascript:window.location.href='../Round 1/login.html'"
+            id="round1"
+            disabled
+          >
+            Round 1
+          </button>
+          <p style="margin: 0">For Teams Only</p>
+          <br />
+          <button
+            class="round-btn"
+            onclick="javascript:window.location.href='https://round2-techastra.onrender.com/login'"
+            id="round2"
+            disabled
+          >
+            Round 2</button
+          ><br />
+          <button
+            class="round-btn"
+            onclick="javascript:window.location.href='../Round 3/login.html'"
+            id="round3"
+            disabled
+          >
+            Round 3</button
+          ><br />
+          <button
+            class="round-btn"
+            onclick="javascript:window.location.href='../Round 3/login.html'"
+            id="round4"
+            
+          >
+            Round 4</button
+          ><br />
+          <button
+            class="round-btn"
+            onclick="javascript:window.location.href='https://techastra-leaderboard.onrender.com/'"
+            id="round4"
+
+          >
+            Leaderboards</button
+          ><br />
+        </div>
+      </section>
+      <img src="images/shapes/hero-shape-1.svg" alt="" class="sec-bg-img1" />
+      <img src="images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+    </section>
+  </body>
+</html>
