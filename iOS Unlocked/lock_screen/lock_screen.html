@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>iOS Unlocked | iOS Club</title>
+</head>
+
+<script>
+    function routeToLockScreen() {
+        window.location.href = "index.html";
+    }
+
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault(); // Disable right-click context menu
+    });
+
+</script>
+
+<body>
+    <div class="grid min-h-screen bg-purple-50 place-items-center">
+        <!-- The iPhone shell -->
+        <div
+            class="mx-auto h-[712px] w-[350px] bg-black rounded-[60px] border-[14px] border-black relative overflow-hidden ring ring-purple-400 shadow-xl ">
+            <img class="absolute inset-0 h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1547483238-2cbf881a559f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" />
+            <div class="absolute top-0 inset-x-0">
+                <div class="mx-auto bg-black h-6 w-40 rounded-b-3xl"></div>
+            </div>
+            <div class="relative">
+                <div id="lockscreen">
+                    <p id="passt" class="passcode">Enter Passcode</p>
+                    <input type="radio" id="radio1" />
+                    <input type="radio" id="radio2" />
+                    <input type="radio" id="radio3" />
+                    <input type="radio" id="radio4" />
+                    <p></p>
+                    <div class="passnum">
+                        <p>1<span>&nbsp;</span></p>
+                    </div>
+                    <div class="passnum">
+                        <p>2<span>ABC</span></p>
+                    </div>
+                    <div class="passnum" style="margin-right:0;">
+                        <p>3<span>DEF</span></p>
+                    </div>
+                    <div class="passnum">
+                        <p>4<span>GHI</span></p>
+                    </div>
+                    <div class="passnum">
+                        <p>5<span>JKL</span></p>
+                    </div>
+                    <div class="passnum" style="margin-right:0;">
+                        <p>6<span>MNO</span></p>
+                    </div>
+                    <div class="passnum">
+                        <p>7<span>PQR</span></p>
+                    </div>
+                    <div class="passnum">
+                        <p>8<span>STU</span></p>
+                    </div>
+                    <div class="passnum" style="margin-right:0;">
+                        <p>9<span>VWYZ</span></p>
+                    </div>
+                    <div class="passnum" style="margin-right:0;">
+                        <p>0</p>
+                    </div>
+                    <div style="position:absolute;right:20px;bottom:20px;cursor:pointer;" onclick="resetPasscode(1)">
+                        Cancel</div>
+                </div>
+
+
+            </div>
+            <!-- Flashlight, camera and bottom swipe menu -->
+            <div class="absolute bottom-0 inset-x-0 h-20">
+                <div class="px-10 flex justify-between">
+                    <button class="bg-gray-800/40 backdrop-blur-md text-white rounded-full p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                        </svg>
+                    </button>
+                    <button class="bg-gray-800/40 backdrop-blurmd text-white rounded-full startButton" onclick="routeToLockScreen()">
+                        Hints
+                      </button>
+                    <button class="bg-gray-800/40 backdrop-blur-md text-white rounded-full p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="absolute bottom-1 inset-x-0"  >
+                    <div class="mx-auto h-1 w-28 rounded bg-white"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="event.js"></script>
+    <script>
+        createStartCookie()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanks | Round 1 | iOS Unlocked </title>
+    <link rel="shortcut icon" href="../../images/logo/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header
+      x-data="
+	{
+	  navbarOpen: false,
+	  dropdownOpen: false
+	}
+  "
+    >
+      <div class="w-[100%]" style="padding: 10px; width: 125px;">
+        <img src="../Common/images/logo/clublogo.png" alt="logo" class="logo" />
+      </div>
+    </header>
+    <section>
+      <section
+        style="
+          display: flex;
+          height: 80vh;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div style="display: grid; place-items: center">
+          <span id="team-name"> Thank You For Playing </span>
+
+          <button id="s-btn">View Leaderboard</button>
+        </div>
+      </section>
+      <div class="background-image-svg">
+        <img src="../Common/images/shapes/hero-shape-2.svg" alt="" class="sec-bg-img2" />
+      </div>
+    </section>
+    <script>
+      let button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        window.location.replace("https://ios-unlocked-leaderboard.onrender.com/");
+      });
+    </script>
+
+  </body>
+</html>

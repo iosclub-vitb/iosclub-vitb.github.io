@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App with Gallery and Notch</title>
+    <style>
+        /* Basic Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            user-select: none; /* Prevent text selection */
+            -moz-user-select: none; /* For Firefox */
+            -webkit-user-select: none; /* For Chrome/Safari */
+            -ms-user-select: none; /* App screen background */
+        }
+
+        /* iPhone-like shell */
+        .iphone-shell {
+            width: 350px;
+            height: 700px;
+            border: 14px solid black;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            background-image: url('https://images.unsplash.com/photo-1547483238-2cbf881a559f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA==');
+        }
+
+        /* Notch */
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 210px;
+            height: 30px;
+            background-color: black;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 10; /* Ensures the notch is always on top */
+        }
+
+        /* App Icon */
+        .app-icon {
+            position: absolute;
+            top: 70px; /* Moved down to accommodate notch */
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background-image: url('images/photos_logo.png'); /* Example icon */
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        #appScreen {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1547483238-2cbf881a559f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA==');
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the background image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white; /* Change color to white for better visibility */
+        }
+
+        /* App Label */
+        .app-label {
+            position: absolute;
+            top: 140px;
+            left: 35px;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Gallery Screen (hidden by default) */
+        .gallery-container {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            background-image: url('images/gallery_background.jpg'); /* Add your background image here */
+            background-size: cover; /* Cover the entire container */
+            background-position: center; /* Center the background image */
+            overflow-y: auto;
+        }
+
+        /* Image Grid for Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+            margin-top: 80px; /* Added margin to push the images down */
+        }
+
+        /* Individual Gallery Image */
+        .gallery-image {
+            width: 100%; /* Makes it responsive */
+            height: 0; /* Set height to 0 */
+            padding-bottom: 100%; /* Creates a square by using padding */
+            position: relative; /* Positioning context for absolute children */
+            overflow: hidden; /* Hides overflow content */
+            background-color: #ddd;
+            cursor: pointer; /* Cursor changes to pointer */
+        }
+
+        /* Image inside the Gallery Image */
+        .gallery-image img {
+            position: absolute; /* Absolutely position the image */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            object-fit: cover; /* Maintain aspect ratio and cover */
+        }
+
+        /* Back Arrow */
+        .back-arrow {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            width: 24px; /* Adjust size as needed */
+            height: 24px; /* Adjust size as needed */
+            cursor: pointer;
+            display: none; /* Initially hidden */
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: absolute; /* Stay in place within the iPhone shell */
+            z-index: 100; /* Sit on top */
+            top: 0; /* Position it below the notch */
+            left: 0;
+            right: 0;
+            height: calc(100%); /* Full height minus the notch */
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+
+        /* Modal Image */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+            border: 2px solid white; /* Optional border */
+        }
+
+        /* Close Button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Submit Passcode Button */
+        .btn {
+            position: relative;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1em 2.5em;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 6em;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+            font-weight: 500;
+            color: black;
+            background-color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+            background-color: #fff;
+        }
+
+        .btn:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+        /* Centering Parent for the Button */
+        .button-container {
+            display: flex; /* Use Flexbox to center */
+            justify-content: center; /* Center horizontally */
+            padding-bottom: 20px;
+            margin-top: 50px; /* Space from the grid above */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- iPhone-like shell -->
+    <div class="iphone-shell">
+
+        <!-- Notch (always visible) -->
+        <div class="notch"></div>
+
+        <!-- Main App Screen with Gallery Icon -->
+        <div id="appScreen">
+            <div class="app-icon" onclick="openGallery()"></div>
+            <div class="app-label">Photos</div>
+        </div>
+
+        <!-- Gallery Screen (Initially hidden) -->
+        <div id="galleryScreen" class="gallery-container">
+            <div class="gallery-grid">
+                <!-- Gallery images -->
+                <div class="gallery-image" onclick="openModal('images/gallery_images/image1.jpg')"><img src="images/gallery_images/image1.jpg" alt="Image 1"></div>
+                <div class="gallery-image" onclick="openModal('images/gallery_images/image2.jpg')"><img src="images/gallery_images/image2.jpg" alt="Image 2"></div>
+                <div class="gallery-image" onclick="openModal('images/gallery_images/image3.jpg')"><img src="images/gallery_images/image3.jpg" alt="Image 3"></div>
+                <div class="gallery-image" onclick="openModal('images/gallery_images/image4.jpg')"><img src="images/gallery_images/image4.jpg" alt="Image 4"></div>
+                <div class="gallery-image" onclick="openModal('images/gallery_images/image5.jpg')"><img src="images/gallery_images/image5.jpg" alt="Image 5"></div>
+                <div class="gallery-image" onclick="openModal('images/gallery_images/image6.jpg')"><img src="images/gallery_images/image6.jpg" alt="Image 6"></div>
+            </div>
+
+            <!-- Button Container for Centering the Submit Button -->
+            <!-- Button Container for Centering the Submit Button -->
+            <div class="button-container">
+                <button class="btn" onclick="submitPasscode()">Submit Passcode</button>
+            </div>
+        </div>
+
+        <!-- Back Arrow -->
+        <img id="backArrow" class="back-arrow" src="images/arrow.png" alt="Back" onclick="goBack()" />
+
+        <!-- Modal for displaying full image inside the iPhone shell -->
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalContent" class="modal-content" />
+        </div>
+    </div>
+
+    <script>
+        
+function setCookie(name, value, hours = 5) {
+  const now = new Date();
+  now.setTime(now.getTime() + hours * 60 * 60 * 1000); // Add hours to the current time
+  const expires = "expires=" + now.toUTCString();
+  document.cookie = name + "=" + value + "; " + expires + "; path=/";
+}
+
+function getCookie(cookieName) {
+  var cookiesArray = document.cookie.split("; ");
+  for (var i = 0; i < cookiesArray.length; i++) {
+    var cookie = cookiesArray[i];
+    var cookieParts = cookie.split("=");
+    if (cookieParts[0] === cookieName) {
+      return cookieParts[1];
+    }
+  }
+  return null;
+}
+        // Function to open gallery
+        function openGallery() {
+            document.getElementById('appScreen').style.display = 'none'; // Hide the app screen
+            document.getElementById('galleryScreen').style.display = 'block'; // Show gallery screen
+            document.getElementById('backArrow').style.display = 'block'; // Show back arrow
+        }
+
+        // Function to open modal for full image view
+        function openModal(imageSrc) {
+            document.getElementById('modal').style.display = 'flex'; // Show modal
+            document.getElementById('modalContent').src = imageSrc; // Set image source
+        }
+
+        // Function to close modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none'; // Hide modal
+        }
+
+        // Function to go back to app screen
+        function goBack() {
+            document.getElementById('galleryScreen').style.display = 'none'; // Hide gallery screen
+            document.getElementById('appScreen').style.display = 'block'; // Show app screen
+            document.getElementById('backArrow').style.display = 'none'; // Hide back arrow
+        }
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault(); // Disable right-click context menu
+        });
+
+        function submitPasscode() {
+           window.location.href='../Submit Code Form/login.html'
+        }
+
+     
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Code | iOS Unlocked</title>
+    <link
+      rel="shortcut icon"
+      href="../../images/logo/icon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header
+      style="position: sticky !important"
+      x-data=" {  navbarOpen: false,  dropdownOpen: false } "
+    >
+      <div class="w-[100%]">
+        <img
+          src="../Common/images/logo/clublogo.png"
+          alt="logo"
+          class="logo"
+          style="margin: 2.5%; width: 125px"
+        />
+      </div>
+    </header>
+
+    <section>
+      <section id="home" style="margin-top: 50%;">
+        <h3 style="margin-bottom: 0; text-align: center">
+          Submit The Code You Found
+          <h1 style="margin-top: 10px" id="team-name">TEAMNAME</h1>
+        </h3>
+        <br />
+
+        <input name="codeInput" type="text" minlength="6" maxlength="6" placeholder="Enter The 6 Digit Code" style="padding: 5px  ; outline: none; width:  95%; border-radius: 5px; font-size: medium;">
+ 
+        <div>
+          <button class="submit-btn" onclick="submitScoreProcess()">SUBMIT</button>
+        </div>
+
+  
+      </section>
+      <img
+        src="../Common/images/shapes/hero-shape-1.svg"
+        alt=""
+        class="sec-bg-img1"
+      />
+      <img
+        src="../Common/images/shapes/hero-shape-2.svg"
+        alt=""
+        class="sec-bg-img2"
+      />
+    </section>
+  </body>
+  <script src="./main.js"></script>
+  <script>
+    document.getElementById("team-name").innerHTML =
+      getCookie("loggedTeamName");
+  </script>
+</html>
