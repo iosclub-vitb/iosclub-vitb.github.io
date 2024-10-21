@@ -29,18 +29,6 @@ if (getCookie("round1Score") && !getCookie("playedRound1")) {
   window.location.href = "./thanks.html";
 }
 
-setTimeout(() => {
-  alert("Only 15 Minutes Left Before Phone Closes");
-}, 100000000);
-setTimeout(() => {
-  alert("Only 1 Minutes Left Before Phone Closes");
-}, 1740000);
-
-setTimeout(() => {
-  alert("Time Up - Phone Locked");
-  submitScore(true);
-}, 900000);
-
 function decryptAnswer(encAns, ind) {
   return encAns * 10 - encoders[ind];
 }
@@ -65,7 +53,7 @@ async function submitScoreProcess() {
         {
           method: "GET",
         }
-      ).catch((error) => console.log("CATTING : " + error));
+      )
       setCookie("submittedScore", Score);
       window.location.href = "./thanks.html";
     } catch (error) {
