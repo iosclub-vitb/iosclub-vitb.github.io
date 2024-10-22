@@ -46,7 +46,7 @@ teamInfo = {
   "eshant.24bcy10212@vitbhopal.ac.in": "TECH_WARRIORS",
   "manya.24bce11428@vitbhopal.ac.in": "BETA",
   "anmol.24bec10149@vitbhopal.ac.in": "Team B-iOS",
-  "Sujal.24bai10937@vitbhopal.ac.in": "Team Guava",
+  "sujal.24bai10937@vitbhopal.ac.in": "Team Guava",
   "divyanshu.24bsa10328@vitbhopal.ac.in": "Team Wolves",
   "krish.23bcy10313@vitbhopal.ac.in": "Xcoders",
   "jai.23mim10052@vitbhopal.ac.in": "Kothri lions",
