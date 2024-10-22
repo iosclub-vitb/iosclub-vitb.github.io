@@ -55,7 +55,8 @@ teamInfo = {
   "aryanshgupta2022@vitbhopal.ac.in":"Tester2",
   "leonardofernandes2022@vitbhopal.ac.in":"Tester3",
   "riyasingh.2022@vitbhopal.ac.in":"Tester4",
-  "bhoumikchopra2022@vitbhopal.ac.in":"Tester5"
+  "bhoumikchopra2022@vitbhopal.ac.in":"Tester5",
+  "mridul.24bcy10127@vitbhopal.ac.in" :"MAP"
 
 };
 
