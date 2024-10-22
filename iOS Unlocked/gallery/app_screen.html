@@ -295,6 +295,10 @@ function getCookie(cookieName) {
   }
   return null;
 }
+
+if (!getCookie("crackedCode")){
+    window.location.href="../lock_screen/index.html"
+}
         // Function to open gallery
         function openGallery() {
             document.getElementById('appScreen').style.display = 'none'; // Hide the app screen

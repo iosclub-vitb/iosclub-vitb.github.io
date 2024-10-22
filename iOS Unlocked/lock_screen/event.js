@@ -1,6 +1,6 @@
 // Updated JavaScript Code
 
-var passcode = "1234";
+var passcode = "0941";
 var atpass = "";
 var locked = true;
 var xDown = null;

@@ -35,10 +35,10 @@ function decryptAnswer(encAns, ind) {
 
 async function submitScoreProcess() {
   var userSubmit = document.querySelector("input[name='codeInput']").value;
-  if (userSubmit == "696969") {
+  if (userSubmit == "852417") {
     var teamName = getCookie("loggedTeamName");
     var rawScore = parseInt(
-      800 - (new Date().getTime() - parseInt(getCookie("startTime"))) / 3400
+      800 - (new Date().getTime() - parseInt(getCookie("startTime"))) / 12500
     );
     var hintsUsedPenality = getCookie("hintsUsed") * 25;
     var Score = rawScore - hintsUsedPenality;
